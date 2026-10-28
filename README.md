@@ -88,11 +88,13 @@ $result.reply
 $result.trace_id
 ```
 
-The no-ticker prompt should return a needs-symbol answer. Try `Research AAPL news
-sentiment` to exercise provider tools; expect evidence or an explicit unavailable
-source status. In Streamlit, check the sidebar API URL, send the same prompts, and
-inspect the Trace tab. Readiness means settings are present, not that credentials
-or live provider access have been validated.
+Try `What are the current market trends around the USD?` to exercise web search,
+Finnhub exchange rates, and Alpha Vantage macro news. Try `Research AAPL news
+sentiment` for ticker-specific data. Replies include numbered links to retrieved
+evidence; unavailable or stale provider data is called out explicitly. In
+Streamlit, check the sidebar API URL, send the same prompts, and inspect the Trace
+tab. Readiness means settings are present, not that credentials or live provider
+access have been validated.
 
 The first uncached provider request can take longer than a repeat request because
 the result is then cached in DuckDB. Configure `PROVIDER_REQUEST_TIMEOUT_SECONDS`

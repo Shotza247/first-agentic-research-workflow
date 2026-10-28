@@ -48,15 +48,26 @@ do not apply to the Sheets adapter.
 
 ## Market and Research Sources
 
-- `FINNHUB_API_KEY`: ticker quote data.
-- `ALPHAVANTAGE_API_KEY`: ticker news sentiment.
+- `FINNHUB_API_KEY`: ticker quotes and base-currency exchange rates.
+- `ALPHAVANTAGE_API_KEY`: ticker news sentiment and macroeconomic headlines.
+- Web research uses DuckDuckGo search and requires no API key.
 - `FINNHUB_SYMBOL_ALIASES` and `ALPHAVANTAGE_SYMBOL_ALIASES`: optional comma-separated
   `symbol=provider_symbol` mappings; verify symbols with each provider.
 - `MAX_ENRICHMENT_SYMBOLS`: maximum symbols handled by each market/research wrapper,
   default 3. Explicit question tickers take precedence over ledger-derived symbols.
 
-Yahoo Finance, Google Finance, Drive document ingestion, and MongoDB retrieval are
-not implemented adapters. Sheets access does not imply general Drive document access.
+Market and macro questions route to web search plus the relevant provider agents.
+Currency codes such as `USD` use Finnhub's FX rates and Alpha Vantage's macro-news
+feed instead of being mistaken for stock tickers. Replies contain numbered
+references, and `POST /chat` also returns a `citations` list with each source's
+URL, claim, publication time (when supplied), and retrieval time.
+
+Web results are fetched per request and are not cached. Finnhub/Alpha Vantage
+responses use the configured DuckDB cache. Provider keys remain optional: if a
+provider is not configured, its unavailable status is shown while the other
+sources can still contribute. Yahoo Finance, Google Finance, Drive document
+ingestion, and MongoDB retrieval are not implemented adapters. Sheets access does
+not imply general Drive document access.
 
 ## Storage and Reporting
 

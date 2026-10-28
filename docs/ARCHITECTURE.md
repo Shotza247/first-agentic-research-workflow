@@ -15,8 +15,9 @@ The product direction is one research agent exposed through a reusable Python
 service. CLI, FastAPI, and Streamlit are access points. React can later consume
 the API. Additional autonomous specialists are deferred.
 
-The current runtime uses three deterministic specialist wrappers: ledger, market,
-and research. These are connected code, not autonomous LLM agents.
+The current runtime uses deterministic specialist wrappers for ledger, ticker
+quotes, FX rates, financial news, macro news, and web research. These are
+connected code, not autonomous LLM agents.
 
 ## Folder Responsibilities
 
@@ -26,10 +27,11 @@ Package paths below are relative to `src/investment_agents/`.
 | --- | --- |
 | `cli.py` | Terminal interaction |
 | `core/` | Configuration, local model wrapper, messages, trace recording |
-| `agents/alphavantage_agent.py` | Research/news-sentiment wrapper |
-| `agents/orchestrator.py`, `agents/routing.py` | Keyword routing and template aggregation |
+| `agents/alphavantage_agent.py` | Ticker news and macro-news wrapper |
+| `agents/web_search_agent.py` | Current web research and linked evidence |
+| `agents/orchestrator.py`, `agents/routing.py` | Keyword routing and evidence synthesis |
 | `agents/ledger_agent.py`, `agents/finnhub_agent.py` | Earlier ledger and quote wrappers |
-| `tools/` | Provider adapters, readiness and error handling |
+| `tools/` | Finnhub, Alpha Vantage, web search, and Sheets adapters |
 | `domain/` | Parsing, tickers, money and portfolio calculations |
 | `storage/` | DuckDB market payload and FX storage |
 | `api/` | HTTP routes and request/response contracts |
@@ -46,9 +48,9 @@ The ledger and quote modules are retained, connected code, not disabled archives
 CLI default --------------------+
 Streamlit -> FastAPI /chat ------+-> OrchestratorAgent.respond()
                                     -> keyword/ticker routing
-                                    -> selected specialist wrappers
-                                    -> tools and cache
-                                    -> template response and trace
+                                    -> ledger / Finnhub / Alpha Vantage / web agents
+                                    -> provider tools and DuckDB cache
+                                    -> cited evidence response and trace
 
 CLI --local-llm -> FirstAgent -> local Hugging Face generation
 ```
@@ -79,16 +81,27 @@ not implemented merely by describing them in the system prompt.
 FastAPI exposes `/health`, `/agents`, `/tools/readiness`, `/storage/status`,
 `POST /chat`, `/observability/events`, and `/observability/status`.
 Chat responses contain `reply`, updated `chat`, `elapsed_seconds`, `model_id`,
-`trace_id`, `selected_agents`, `agent_results`, `routing_decision`, and `source_notes`.
+`trace_id`, `selected_agents`, `agent_results`, `routing_decision`, `source_notes`,
+and structured `citations`. Market and currency questions can combine live web
+results with Finnhub quote/FX data and Alpha Vantage ticker/macro news. Citations
+are attached to the evidence used in the response; unavailable sources are
+reported rather than silently treated as evidence.
 
 The ledger tool reads Google Sheets on demand. It parses transactions, holdings,
 and an optional watchlist. The orchestrator can pass ledger-derived symbols to
 market/research wrappers. Finnhub supplies quotes; Alpha Vantage supplies news
-sentiment. DuckDB stores raw payloads, curated snapshots, and FX rates.
+sentiment and macro news. Finnhub also supplies currency cross-rates, while web
+search adds current public sources. DuckDB stores provider payloads, curated
+snapshots, and FX rates.
+
+To add a specialist, implement the shared `AnalysisAgent.analyze()` contract,
+wire its adapter through `ToolRegistry`, then add its routing rule and response
+evidence. The API contract remains reusable by CLI, Streamlit, and other clients.
 
 Events record routing, specialist starts, and tool calls. Streamlit displays the
-latest trace. Neither a health response nor configured-tool status verifies a
-live provider call. See [SETUP.md](SETUP.md) for configuration and error behavior.
+latest trace and renders the response's source links. Neither a health response nor
+configured-tool status verifies a live provider call. See [SETUP.md](SETUP.md) for
+configuration and error behavior.
 
 ## Remaining Work
 
