@@ -8,11 +8,13 @@ from investment_agents.agents.base import AgentResult
 from investment_agents.agents.finnhub_agent import FinnhubInvestmentAgent
 from investment_agents.agents.ledger_agent import LedgerInterpretationAgent
 from investment_agents.agents.routing import AgentRouter
+from investment_agents.agents.web_search_agent import WebSearchAgent
 from investment_agents.core.config import Settings, get_settings
 from investment_agents.core.messages import ChatMessage, DEFAULT_MODEL_ID, initial_chat
 from investment_agents.core.observability import event_recorder
 from investment_agents.domain.models import RouteDecision
 from investment_agents.tools.registry import ToolRegistry
+from investment_agents.tools.web_search import WebSearchTool
 
 
 @dataclass
@@ -54,6 +56,7 @@ class OrchestratorResponse:
     agent_results: list[dict]
     routing_decision: dict
     source_notes: list[dict[str, str]]
+    citations: list[dict[str, str]]
 
 
 class OrchestratorAgent:
@@ -66,12 +69,19 @@ class OrchestratorAgent:
         finnhub_agent: FinnhubInvestmentAgent,
         alphavantage_agent: AlphaVantageResearchAgent,
         model_id: str = DEFAULT_MODEL_ID,
+        web_search_agent: WebSearchAgent | None = None,
     ) -> None:
         self.ledger_agent = ledger_agent
         self.finnhub_agent = finnhub_agent
         self.alphavantage_agent = alphavantage_agent
+        self.web_search_agent = web_search_agent or WebSearchAgent(WebSearchTool())
         self.model_id = model_id
-        self.router = AgentRouter(ledger_agent, finnhub_agent, alphavantage_agent)
+        self.router = AgentRouter(
+            ledger_agent,
+            finnhub_agent,
+            alphavantage_agent,
+            self.web_search_agent,
+        )
 
     @classmethod
     def from_settings(cls, settings: Settings | None = None) -> "OrchestratorAgent":
@@ -89,6 +99,7 @@ class OrchestratorAgent:
             finnhub_agent=FinnhubInvestmentAgent(registry.finnhub, settings=registry.settings),
             alphavantage_agent=AlphaVantageResearchAgent(registry.alphavantage, settings=registry.settings),
             model_id=model_id,
+            web_search_agent=WebSearchAgent(registry.web_search),
         )
 
     def available_agents(self) -> list[dict[str, str]]:
@@ -96,6 +107,7 @@ class OrchestratorAgent:
             {"name": self.ledger_agent.name, "description": self.ledger_agent.description},
             {"name": self.finnhub_agent.name, "description": self.finnhub_agent.description},
             {"name": self.alphavantage_agent.name, "description": self.alphavantage_agent.description},
+            {"name": self.web_search_agent.name, "description": self.web_search_agent.description},
         ]
 
     def respond(
@@ -135,11 +147,24 @@ class OrchestratorAgent:
                     )
                 continue
 
-            result = agent.analyze(message, trace_id, symbols=symbol_hints)
+            result = agent.analyze(
+                message,
+                trace_id,
+                symbols=symbol_hints,
+                currencies=routing_decision.currency_codes,
+            )
             results.append(result)
 
         source_notes = _source_status_notes(results)
-        reply = self._synthesize(message, results, trace_id, routing_decision, source_notes)
+        citations = _citations_from_results(results)
+        reply = self._synthesize(
+            message,
+            results,
+            trace_id,
+            routing_decision,
+            source_notes,
+            citations,
+        )
         next_chat = list(chat or initial_chat())
         next_chat.append({"role": "user", "content": message})
         next_chat.append({"role": "assistant", "content": reply})
@@ -155,6 +180,7 @@ class OrchestratorAgent:
             agent_results=[result.to_dict() for result in results],
             routing_decision=routing_decision.to_dict(),
             source_notes=[note.to_dict() for note in source_notes],
+            citations=citations,
         )
 
     def _synthesize(
@@ -164,27 +190,63 @@ class OrchestratorAgent:
         trace_id: str,
         routing_decision: RouteDecision,
         source_notes: list[SourceNote] | None = None,
+        citations: list[dict[str, str]] | None = None,
     ) -> str:
         sections = [
-            "I routed your request through the investment analytics orchestrator.",
-            f"Question: {question}",
-            f"Focus areas: {', '.join(routing_decision.focus_areas)}",
-            f"Symbols: {', '.join(routing_decision.symbols) if routing_decision.symbols else 'none detected'}",
+            f"Research: {question}",
+            (
+                "Coverage: "
+                f"{', '.join(routing_decision.focus_areas)}"
+                if routing_decision.focus_areas
+                else "Coverage: general research"
+            ),
             "",
-            "Specialist findings:",
         ]
+        if routing_decision.currency_codes:
+            sections.append(
+                "FX rates are point-in-time cross-rates; a directional trend needs "
+                "historical rate data."
+            )
+            sections.append("")
+        citations = citations if citations is not None else _citations_from_results(results)
+        citation_ids = _citation_ids_by_tool_call(results, citations)
+        citations_by_id = {citation["id"]: citation for citation in citations}
         for result in results:
-            sections.append(f"- {result.agent_name}: {result.summary}")
+            if result.tool_calls:
+                for tool_call in result.tool_calls:
+                    summary = str(tool_call.get("summary", ""))
+                    if not summary:
+                        continue
+                    references = citation_ids.get(id(tool_call), [])
+                    if references:
+                        for citation_id in references:
+                            citation = citations_by_id[citation_id]
+                            claim = citation.get("claim") or summary
+                            sections.append(f"- {claim} [{citation_id}]")
+                    else:
+                        sections.append(f"- {summary}")
+            else:
+                sections.append(f"- {result.summary}")
 
         source_notes = source_notes if source_notes is not None else _source_status_notes(results)
         if source_notes:
-            sections.extend(["", "Data/source notes:"])
+            sections.extend(["", "Data limitations:"])
             sections.extend(f"- {note.message}" for note in source_notes)
+
+        if citations:
+            sections.extend(["", "Sources:"])
+            for citation in citations:
+                citation_id = citation["id"]
+                title = citation["title"]
+                source = citation["source"]
+                url = citation["url"]
+                date = citation.get("published_at") or citation.get("retrieved_at", "")
+                date_note = f" ({date})" if date else ""
+                sections.append(f"[{citation_id}] [{title}]({url}) — {source}{date_note}")
 
         sections.extend(
             [
                 "",
-                "Current status: this is the multi-agent foundation. Live analysis will become richer as the Google Sheets, Finnhub, and Alpha Vantage credentials/tool mappings are configured.",
                 f"Trace ID: {trace_id}",
             ]
         )
@@ -221,6 +283,51 @@ def _source_status_notes(results: list[AgentResult]) -> list[SourceNote]:
                 )
             )
     return notes
+
+
+def _citations_from_results(results: list[AgentResult]) -> list[dict[str, str]]:
+    citations: list[dict[str, str]] = []
+    for result in results:
+        for tool_call in result.tool_calls:
+            data = tool_call.get("data") or {}
+            for citation in data.get("citations") or []:
+                if not isinstance(citation, dict) or not citation.get("url"):
+                    continue
+                citations.append(
+                    {
+                        "id": str(len(citations) + 1),
+                        "agent_name": result.agent_name,
+                        "tool_name": str(tool_call.get("tool_name", "")),
+                        "title": str(citation.get("title", "Source")),
+                        "url": str(citation["url"]),
+                        "source": str(citation.get("source", result.agent_name)),
+                        "claim": str(citation.get("claim", "")),
+                        "published_at": str(citation.get("published_at", "")),
+                        "retrieved_at": str(citation.get("retrieved_at", "")),
+                    }
+                )
+    return citations
+
+
+def _citation_ids_by_tool_call(
+    results: list[AgentResult],
+    citations: list[dict[str, str]],
+) -> dict[int, list[str]]:
+    grouped: dict[int, list[str]] = {}
+    citation_iterator = iter(citations)
+    for result in results:
+        for tool_call in result.tool_calls:
+            raw_citations = (tool_call.get("data") or {}).get("citations") or []
+            count = sum(
+                1
+                for citation in raw_citations
+                if isinstance(citation, dict) and citation.get("url")
+            )
+            grouped[id(tool_call)] = [
+                next(citation_iterator)["id"]
+                for _ in range(count)
+            ]
+    return grouped
 
 
 def _tool_call_source_note(agent_name: str, tool_call: dict) -> SourceNote | None:

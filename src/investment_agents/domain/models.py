@@ -13,6 +13,7 @@ class RouteDecision:
     selected_agents: list[str]
     focus_areas: list[AnalysisFocus]
     symbols: list[str] = field(default_factory=list)
+    currency_codes: list[str] = field(default_factory=list)
     reasons: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict:

@@ -32,9 +32,10 @@ class AlphaVantageResearchAgent:
         question: str,
         trace_id: str,
         symbols: list[str] | None = None,
+        currencies: list[str] | None = None,
     ) -> AgentResult:
         selected_symbols = self._symbols_for_analysis(question, symbols)
-        if not selected_symbols:
+        if not selected_symbols and not currencies:
             event_recorder.record(
                 "agent_skipped",
                 self.name,
@@ -54,9 +55,13 @@ class AlphaVantageResearchAgent:
         event_recorder.record(
             "agent_started",
             self.name,
-            f"Researching Alpha Vantage context for {', '.join(selected_symbols)}.",
+            (
+                f"Researching Alpha Vantage context for {', '.join(selected_symbols)}."
+                if selected_symbols
+                else "Researching Alpha Vantage macro news."
+            ),
             trace_id,
-            {"symbols": selected_symbols, "question": question},
+            {"symbols": selected_symbols, "currencies": currencies or [], "question": question},
         )
 
         results = []
@@ -67,6 +72,16 @@ class AlphaVantageResearchAgent:
                 "tool_called",
                 self.name,
                 f"Called {result.tool_name} for {symbol}.",
+                trace_id,
+                asdict(result),
+            )
+        if currencies:
+            result = self.tool.research_macro(question)
+            results.append(result)
+            event_recorder.record(
+                "tool_called",
+                self.name,
+                "Called Alpha Vantage for macro news.",
                 trace_id,
                 asdict(result),
             )
@@ -82,6 +97,7 @@ class AlphaVantageResearchAgent:
             tool_calls=[asdict(result) for result in results],
             metadata={
                 "symbols": selected_symbols,
+                "currencies": currencies or [],
                 "tool_status": statuses[0] if len(set(statuses)) == 1 else "mixed",
                 "tool_statuses": statuses,
             },

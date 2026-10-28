@@ -204,6 +204,7 @@ class AlphaVantageResearchTool:
             item.get("title", "Untitled") if isinstance(item, dict) else "Untitled"
             for item in feed
         ]
+        citations = _article_citations(feed, fetched_at)
         if self.cache:
             self.cache.store_curated_snapshot(
                 self.name,
@@ -228,11 +229,214 @@ class AlphaVantageResearchTool:
                 "symbol": requested_symbol,
                 "provider_symbol": provider_symbol,
                 "headlines": titles,
+                "citations": citations,
                 "raw": payload,
                 "cache_status": cache_status,
                 "fetched_at": fetched_at,
             },
         )
+
+    def research_macro(self, query: str) -> ToolResult:
+        readiness = self.readiness()
+        if not readiness.configured:
+            return ToolResult(
+                tool_name=self.name,
+                status=readiness.status,
+                summary=(
+                    "Alpha Vantage access is not configured yet. Missing settings: "
+                    f"{', '.join(readiness.missing_settings)}."
+                ),
+                data={"query": query, "missing_settings": readiness.missing_settings},
+            )
+
+        cache_key = "macro"
+        cached = (
+            self.cache.get_fresh_raw_payload(
+                source=self.name,
+                endpoint="macro_news",
+                cache_key=cache_key,
+                ttl_seconds=self.settings.market_cache_ttl_seconds,
+            )
+            if self.cache
+            else None
+        )
+        if cached:
+            payload = cached.payload
+            cache_status = "hit"
+            fetched_at = cached.fetched_at
+        else:
+            try:
+                response = requests.get(
+                    self.base_url,
+                    params={
+                        "function": "NEWS_SENTIMENT",
+                        "topics": (
+                            "financial_markets,economy_monetary,"
+                            "economy_macro,economy_fiscal"
+                        ),
+                        "apikey": self.settings.alphavantage_api_key,
+                    },
+                    timeout=(3.05, self.settings.provider_request_timeout_seconds),
+                )
+                response.raise_for_status()
+                payload = response.json()
+            except requests.RequestException as exc:
+                return self._stale_macro_result_or_error(
+                    ToolResult(
+                        **provider_request_error(
+                            tool_name=self.name,
+                            provider_name="Alpha Vantage",
+                            symbol="macro",
+                            provider_symbol="macro",
+                            exc=exc,
+                        )
+                    ),
+                    query,
+                )
+            except ValueError as exc:
+                return self._stale_macro_result_or_error(
+                    ToolResult(
+                        **provider_payload_error(
+                            tool_name=self.name,
+                            provider_name="Alpha Vantage",
+                            symbol="macro",
+                            provider_symbol="macro",
+                            exc=exc,
+                        )
+                    ),
+                    query,
+                )
+
+            if not isinstance(payload, dict):
+                return self._stale_macro_result_or_error(
+                    ToolResult(
+                        **provider_payload_error(
+                            tool_name=self.name,
+                            provider_name="Alpha Vantage",
+                            symbol="macro",
+                            provider_symbol="macro",
+                            exc=ValueError("Expected a JSON object."),
+                        )
+                    ),
+                    query,
+                )
+            limit_message = rate_limit_message(payload)
+            if limit_message:
+                return self._stale_macro_result_or_error(
+                    ToolResult(
+                        **provider_rate_limit(
+                            tool_name=self.name,
+                            provider_name="Alpha Vantage",
+                            symbol="macro",
+                            provider_symbol="macro",
+                            message=limit_message,
+                        )
+                    ),
+                    query,
+                )
+            if "Error Message" in payload:
+                return self._stale_macro_result_or_error(
+                    ToolResult(
+                        **provider_payload_error(
+                            tool_name=self.name,
+                            provider_name="Alpha Vantage",
+                            symbol="macro",
+                            provider_symbol="macro",
+                            exc=ValueError("Provider returned an error message."),
+                        )
+                    ),
+                    query,
+                )
+            cache_status = "miss"
+            fetched_at = utc_now_iso()
+            if self.cache:
+                stored = self.cache.store_raw_payload(
+                    self.name,
+                    "macro_news",
+                    cache_key,
+                    payload,
+                    fetched_at=fetched_at,
+                )
+                fetched_at = stored.fetched_at
+
+        return self._macro_result(payload, query, cache_status, fetched_at)
+
+    def _macro_result(
+        self,
+        payload: dict,
+        query: str,
+        cache_status: str,
+        fetched_at: str,
+        status: str = "ok",
+    ) -> ToolResult:
+        feed = payload.get("feed", [])
+        if not isinstance(feed, list):
+            return ToolResult(
+                tool_name=self.name,
+                status="malformed_response",
+                summary="Alpha Vantage returned an unreadable macro-news feed.",
+                data={"query": query, "error_type": "ValueError"},
+            )
+        feed = [item for item in feed if isinstance(item, dict)][:5]
+        citations = _article_citations(feed, fetched_at)
+        headlines = [item.get("title", "Untitled") for item in feed]
+        summary = (
+            f"Alpha Vantage returned {len(feed)} macro news items "
+            f"(retrieved {fetched_at})."
+        )
+        if not feed:
+            summary = "Alpha Vantage returned no macro news items."
+            if status == "ok":
+                status = "no_results"
+        if self.cache:
+            self.cache.store_curated_snapshot(
+                self.name,
+                "macro_news",
+                "macro",
+                {"query": query, "headlines": headlines, "fetched_at": fetched_at},
+            )
+        return ToolResult(
+            tool_name=self.name,
+            status=status,
+            summary=summary,
+            data={
+                "query": query,
+                "headlines": headlines,
+                "citations": citations,
+                "raw": payload,
+                "cache_status": cache_status,
+                "fetched_at": fetched_at,
+            },
+        )
+
+    def _stale_macro_result_or_error(
+        self,
+        error_result: ToolResult,
+        query: str,
+    ) -> ToolResult:
+        if not self.cache:
+            return error_result
+        cached = self.cache.get_latest_raw_payload(
+            source=self.name,
+            endpoint="macro_news",
+            cache_key="macro",
+        )
+        if not cached or not isinstance(cached.payload, dict):
+            return error_result
+        result = self._macro_result(
+            cached.payload,
+            query,
+            "stale",
+            cached.fetched_at,
+            status="stale_cache",
+        )
+        result.data["stale_fetched_at"] = cached.fetched_at
+        result.data["degraded_from"] = {
+            "status": error_result.status,
+            "summary": error_result.summary,
+            "data": error_result.data,
+        }
+        return result
 
     def _provider_symbol(self, symbol: str) -> str:
         return (self.settings.alphavantage_symbol_aliases or {}).get(symbol, symbol)
@@ -280,6 +484,7 @@ class AlphaVantageResearchTool:
                 "symbol": requested_symbol,
                 "provider_symbol": provider_symbol,
                 "headlines": titles,
+                "citations": _article_citations(feed, cached.fetched_at),
                 "raw": cached.payload,
                 "cache_status": "stale",
                 "fetched_at": cached.fetched_at,
@@ -291,3 +496,31 @@ class AlphaVantageResearchTool:
                 },
             },
         )
+
+
+def _article_citations(feed: list, retrieved_at: str) -> list[dict[str, str]]:
+    citations = []
+    for item in feed:
+        if not isinstance(item, dict) or not item.get("url"):
+            continue
+        title = str(item.get("title", "Untitled"))
+        source = str(item.get("source", "Alpha Vantage"))
+        published_at = str(item.get("time_published", ""))
+        sentiment = str(item.get("overall_sentiment_label", ""))
+        claim = title
+        if sentiment:
+            claim = f"{title} (reported sentiment: {sentiment})"
+        sentiment_score = item.get("overall_sentiment_score")
+        if sentiment_score is not None:
+            claim = f"{claim}, score {sentiment_score}"
+        citations.append(
+            {
+                "title": title,
+                "url": str(item["url"]),
+                "source": source,
+                "claim": claim,
+                "published_at": published_at,
+                "retrieved_at": retrieved_at,
+            }
+        )
+    return citations

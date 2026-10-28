@@ -22,6 +22,7 @@ class ChatResponse(BaseModel):
     agent_results: list[dict[str, Any]]
     routing_decision: dict[str, Any]
     source_notes: list[dict[str, Any]] = Field(default_factory=list)
+    citations: list[dict[str, str]] = Field(default_factory=list)
 
 
 class HealthResponse(BaseModel):

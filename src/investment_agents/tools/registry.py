@@ -7,6 +7,7 @@ from investment_agents.tools.alphavantage import AlphaVantageResearchTool
 from investment_agents.tools.base import ToolReadiness
 from investment_agents.tools.finnhub import FinnhubInvestmentTool
 from investment_agents.tools.google_sheets_ledger import GoogleSheetsLedgerTool
+from investment_agents.tools.web_search import WebSearchTool
 from investment_agents.storage.market_cache import MarketDataCache
 
 
@@ -17,6 +18,7 @@ class ToolRegistry:
     ledger: GoogleSheetsLedgerTool
     finnhub: FinnhubInvestmentTool
     alphavantage: AlphaVantageResearchTool
+    web_search: WebSearchTool
     cache: MarketDataCache
     settings: Settings
 
@@ -29,6 +31,9 @@ class ToolRegistry:
             ledger=GoogleSheetsLedgerTool(settings, cache=cache),
             finnhub=FinnhubInvestmentTool(settings, cache=cache),
             alphavantage=AlphaVantageResearchTool(settings, cache=cache),
+            web_search=WebSearchTool(
+                timeout_seconds=settings.provider_request_timeout_seconds,
+            ),
             cache=cache,
             settings=settings,
         )
@@ -38,6 +43,7 @@ class ToolRegistry:
             self.ledger.readiness(),
             self.finnhub.readiness(),
             self.alphavantage.readiness(),
+            self.web_search.readiness(),
         ]
 
     def readiness_dicts(self) -> list[dict]:

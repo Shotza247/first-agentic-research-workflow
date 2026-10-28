@@ -26,5 +26,6 @@ class AnalysisAgent(Protocol):
         question: str,
         trace_id: str,
         symbols: list[str] | None = None,
+        currencies: list[str] | None = None,
     ) -> AgentResult:
         ...

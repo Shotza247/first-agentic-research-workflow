@@ -193,6 +193,24 @@ class FinnhubInvestmentTool:
             if requested_symbol != provider_symbol
             else requested_symbol
         )
+        quote_labels = {
+            "c": "current",
+            "o": "open",
+            "h": "high",
+            "l": "low",
+            "dp": "change percent",
+        }
+        citations = [
+            {
+                "title": f"Finnhub {symbol_text} quote",
+                "url": "https://finnhub.io/docs/api/quote",
+                "source": "Finnhub",
+                "claim": f"{label} {symbol_text} quote: {payload[key]}",
+                "retrieved_at": fetched_at,
+            }
+            for key, label in quote_labels.items()
+            if payload.get(key) is not None
+        ]
         return ToolResult(
             tool_name=self.name,
             summary=(
@@ -205,11 +223,202 @@ class FinnhubInvestmentTool:
                 "quote": payload,
                 "cache_status": cache_status,
                 "fetched_at": fetched_at,
+                "citations": citations,
+            },
+        )
+
+    def analyze_currency(self, base_currency: str) -> ToolResult:
+        base = base_currency.upper()
+        readiness = self.readiness()
+        if not readiness.configured:
+            return ToolResult(
+                tool_name=self.name,
+                status=readiness.status,
+                summary=(
+                    "Finnhub access is not configured yet. Missing settings: "
+                    f"{', '.join(readiness.missing_settings)}."
+                ),
+                data={"base_currency": base, "missing_settings": readiness.missing_settings},
+            )
+
+        endpoint = "forex_rates"
+        cached = (
+            self.cache.get_fresh_raw_payload(
+                source=self.name,
+                endpoint=endpoint,
+                cache_key=base,
+                ttl_seconds=self.settings.market_cache_ttl_seconds,
+            )
+            if self.cache
+            else None
+        )
+        if cached:
+            payload = cached.payload
+            cache_status = "hit"
+            fetched_at = cached.fetched_at
+        else:
+            try:
+                response = requests.get(
+                    f"{self.base_url}/forex/rates",
+                    params={"base": base, "token": self.settings.finnhub_api_key},
+                    timeout=(3.05, self.settings.provider_request_timeout_seconds),
+                )
+                response.raise_for_status()
+                payload = response.json()
+            except requests.RequestException as exc:
+                return self._stale_currency_result_or_error(
+                    ToolResult(
+                        **provider_request_error(
+                            tool_name=self.name,
+                            provider_name="Finnhub",
+                            symbol=base,
+                            provider_symbol=base,
+                            exc=exc,
+                        )
+                    ),
+                    base,
+                )
+            except ValueError as exc:
+                return self._stale_currency_result_or_error(
+                    ToolResult(
+                        **provider_payload_error(
+                            tool_name=self.name,
+                            provider_name="Finnhub",
+                            symbol=base,
+                            provider_symbol=base,
+                            exc=exc,
+                        )
+                    ),
+                    base,
+                )
+
+            if not isinstance(payload, dict) or not isinstance(payload.get("quote"), dict):
+                return self._stale_currency_result_or_error(
+                    ToolResult(
+                        **provider_payload_error(
+                            tool_name=self.name,
+                            provider_name="Finnhub",
+                            symbol=base,
+                            provider_symbol=base,
+                            exc=ValueError("Expected a forex quote object."),
+                        )
+                    ),
+                    base,
+                )
+            cache_status = "miss"
+            fetched_at = utc_now_iso()
+            if self.cache:
+                stored = self.cache.store_raw_payload(
+                    self.name,
+                    endpoint,
+                    base,
+                    payload,
+                    fetched_at=fetched_at,
+                )
+                fetched_at = stored.fetched_at
+
+        quote = payload.get("quote") if isinstance(payload, dict) else None
+        if not isinstance(quote, dict):
+            return self._stale_currency_result_or_error(
+                ToolResult(
+                    **provider_payload_error(
+                        tool_name=self.name,
+                        provider_name="Finnhub",
+                        symbol=base,
+                        provider_symbol=base,
+                        exc=ValueError("Expected a forex quote object."),
+                    )
+                ),
+                base,
+            )
+        rates = {
+            currency: rate
+            for currency, rate in quote.items()
+            if currency != base and rate is not None
+        }
+        citations = [
+            {
+                "title": f"Finnhub {base}/{currency} exchange rate",
+                "url": "https://finnhub.io/docs/api/forex-rates",
+                "source": "Finnhub",
+                "claim": f"1 {base} = {rate} {currency}",
+                "retrieved_at": fetched_at,
+            }
+            for currency, rate in rates.items()
+        ]
+        summary = (
+            f"Finnhub returned {len(rates)} exchange rates for {base} "
+            f"(retrieved {fetched_at})."
+        )
+        return ToolResult(
+            tool_name=self.name,
+            summary=summary,
+            data={
+                "base_currency": base,
+                "rates": rates,
+                "cache_status": cache_status,
+                "fetched_at": fetched_at,
+                "citations": citations,
             },
         )
 
     def _provider_symbol(self, symbol: str) -> str:
         return (self.settings.finnhub_symbol_aliases or {}).get(symbol, symbol)
+
+    def _stale_currency_result_or_error(
+        self,
+        error_result: ToolResult,
+        base_currency: str,
+    ) -> ToolResult:
+        if not self.cache:
+            return error_result
+
+        cached = self.cache.get_latest_raw_payload(
+            source=self.name,
+            endpoint="forex_rates",
+            cache_key=base_currency,
+        )
+        if not cached or not isinstance(cached.payload, dict):
+            return error_result
+        quote = cached.payload.get("quote")
+        if not isinstance(quote, dict):
+            return error_result
+        rates = {
+            currency: rate
+            for currency, rate in quote.items()
+            if currency != base_currency and rate is not None
+        }
+        citations = [
+            {
+                "title": f"Finnhub {base_currency}/{currency} exchange rate",
+                "url": "https://finnhub.io/docs/api/forex-rates",
+                "source": "Finnhub",
+                "claim": f"1 {base_currency} = {rate} {currency}",
+                "retrieved_at": cached.fetched_at,
+            }
+            for currency, rate in rates.items()
+        ]
+        return ToolResult(
+            tool_name=self.name,
+            status="stale_cache",
+            summary=(
+                f"Finnhub is unavailable; using {len(rates)} stale exchange rates for "
+                f"{base_currency} from {cached.fetched_at}."
+            ),
+            data={
+                "base_currency": base_currency,
+                "rates": rates,
+                "cache_status": "stale",
+                "fetched_at": cached.fetched_at,
+                "stale_fetched_at": cached.fetched_at,
+                "citations": citations,
+                "degraded_from": {
+                    "status": error_result.status,
+                    "summary": error_result.summary,
+                    "data": error_result.data,
+                },
+            },
+        )
 
     def _stale_quote_result_or_error(
         self,
@@ -234,6 +443,24 @@ class FinnhubInvestmentTool:
             if requested_symbol != provider_symbol
             else requested_symbol
         )
+        quote_labels = {
+            "c": "current",
+            "o": "open",
+            "h": "high",
+            "l": "low",
+            "dp": "change percent",
+        }
+        citations = [
+            {
+                "title": f"Finnhub {symbol_text} quote",
+                "url": "https://finnhub.io/docs/api/quote",
+                "source": "Finnhub",
+                "claim": f"{label} {symbol_text} quote: {cached.payload[key]}",
+                "retrieved_at": cached.fetched_at,
+            }
+            for key, label in quote_labels.items()
+            if cached.payload.get(key) is not None
+        ]
         return ToolResult(
             tool_name=self.name,
             status="stale_cache",
@@ -250,6 +477,7 @@ class FinnhubInvestmentTool:
                 "cache_status": "stale",
                 "fetched_at": cached.fetched_at,
                 "stale_fetched_at": cached.fetched_at,
+                "citations": citations,
                 "degraded_from": {
                     "status": error_result.status,
                     "summary": error_result.summary,

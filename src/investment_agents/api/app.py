@@ -92,6 +92,7 @@ def chat(request: ChatRequest) -> ChatResponse:
         agent_results=result.agent_results,
         routing_decision=result.routing_decision,
         source_notes=result.source_notes,
+        citations=result.citations,
     )
 
 

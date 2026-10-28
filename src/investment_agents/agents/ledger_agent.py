@@ -19,13 +19,14 @@ class LedgerInterpretationAgent:
         question: str,
         trace_id: str,
         symbols: list[str] | None = None,
+        currencies: list[str] | None = None,
     ) -> AgentResult:
         event_recorder.record(
             "agent_started",
             self.name,
             "Analyzing Google Sheets ledger context.",
             trace_id,
-            {"question": question, "symbols": symbols or []},
+            {"question": question, "symbols": symbols or [], "currencies": currencies or []},
         )
         result = self.tool.summarize_ledger(question)
         event_recorder.record(

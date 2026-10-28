@@ -32,9 +32,11 @@ class FinnhubInvestmentAgent:
         question: str,
         trace_id: str,
         symbols: list[str] | None = None,
+        currencies: list[str] | None = None,
     ) -> AgentResult:
         selected_symbols = self._symbols_for_analysis(question, symbols)
-        if not selected_symbols:
+        selected_currencies = list(dict.fromkeys((currencies or [])))[: self.settings.max_enrichment_symbols]
+        if not selected_symbols and not selected_currencies:
             event_recorder.record(
                 "agent_skipped",
                 self.name,
@@ -54,9 +56,17 @@ class FinnhubInvestmentAgent:
         event_recorder.record(
             "agent_started",
             self.name,
-            f"Analyzing Finnhub market data for {', '.join(selected_symbols)}.",
+            (
+                f"Analyzing Finnhub market data for {', '.join(selected_symbols)}."
+                if selected_symbols
+                else f"Analyzing Finnhub exchange rates for {', '.join(selected_currencies)}."
+            ),
             trace_id,
-            {"symbols": selected_symbols, "question": question},
+            {
+                "symbols": selected_symbols,
+                "currencies": selected_currencies,
+                "question": question,
+            },
         )
 
         results = []
@@ -67,6 +77,17 @@ class FinnhubInvestmentAgent:
                 "tool_called",
                 self.name,
                 f"Called {result.tool_name} for {symbol}.",
+                trace_id,
+                asdict(result),
+            )
+
+        for currency in selected_currencies:
+            result = self.tool.analyze_currency(currency)
+            results.append(result)
+            event_recorder.record(
+                "tool_called",
+                self.name,
+                f"Called {result.tool_name} for {currency} currency rates.",
                 trace_id,
                 asdict(result),
             )
@@ -82,6 +103,7 @@ class FinnhubInvestmentAgent:
             tool_calls=[asdict(result) for result in results],
             metadata={
                 "symbols": selected_symbols,
+                "currencies": selected_currencies,
                 "tool_status": statuses[0] if len(set(statuses)) == 1 else "mixed",
                 "tool_statuses": statuses,
             },

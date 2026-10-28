@@ -41,10 +41,23 @@ class OrchestratorTests(unittest.TestCase):
         from investment_agents.agents.orchestrator import OrchestratorAgent
         from investment_agents.core.config import get_settings
         from investment_agents.core.observability import event_recorder
+        from investment_agents.tools.base import ToolResult
+        from investment_agents.tools.web_search import WebSearchTool
 
         event_recorder.clear()
         orchestrator = OrchestratorAgent.from_settings(get_settings())
-        response = orchestrator.respond("Review my portfolio loss and AAPL news sentiment")
+        with patch.object(
+            WebSearchTool,
+            "search",
+            return_value=ToolResult(
+                tool_name="web_search",
+                summary="No web references in this test.",
+                data={"citations": []},
+            ),
+        ):
+            response = orchestrator.respond(
+                "Review my portfolio loss and AAPL news sentiment"
+            )
 
         self.assertEqual(
             response.selected_agents,
@@ -52,6 +65,7 @@ class OrchestratorTests(unittest.TestCase):
                 "ledger_interpretation_agent",
                 "finnhub_investment_agent",
                 "alphavantage_research_agent",
+                "web_search_agent",
             ],
         )
         self.assertEqual(response.routing_decision["symbols"], ["AAPL"])
@@ -66,6 +80,7 @@ class OrchestratorTests(unittest.TestCase):
         from investment_agents.agents.orchestrator import OrchestratorAgent
         from investment_agents.core.config import Settings
         from investment_agents.core.observability import event_recorder
+        from investment_agents.tools.base import ToolResult
         from investment_agents.tools.registry import ToolRegistry
 
         settings = Settings(
@@ -94,12 +109,24 @@ class OrchestratorTests(unittest.TestCase):
 
         event_recorder.clear()
         orchestrator = OrchestratorAgent.from_tool_registry(registry)
-        with patch.object(registry.ledger, "fetch_rows", side_effect=mocked_fetch_rows):
+        with patch.object(registry.ledger, "fetch_rows", side_effect=mocked_fetch_rows), patch.object(
+            registry.web_search,
+            "search",
+            return_value=ToolResult(
+                tool_name="web_search",
+                summary="No web references in this test.",
+                data={"citations": []},
+            ),
+        ):
             response = orchestrator.respond("Research my watchlist")
 
         self.assertEqual(
             response.selected_agents,
-            ["ledger_interpretation_agent", "alphavantage_research_agent"],
+            [
+                "ledger_interpretation_agent",
+                "alphavantage_research_agent",
+                "web_search_agent",
+            ],
         )
         research_result = response.agent_results[1]
         self.assertEqual(research_result["metadata"]["symbols"], ["BARC", "NVDA"])
@@ -143,7 +170,7 @@ class OrchestratorTests(unittest.TestCase):
 
         reply = orchestrator._synthesize("Check BARC", [result], "trace-stale", route)
 
-        self.assertIn("Data/source notes:", reply)
+        self.assertIn("Data limitations:", reply)
         self.assertIn(
             "finnhub_investment_agent/finnhub_investment_data BARC (LON:BARC): "
             "using stale cached data from 2026-01-01T00:00:00+00:00 after rate limited.",
@@ -1037,6 +1064,8 @@ class ApiContractTests(unittest.TestCase):
 
     def test_api_exposes_agents_chat_and_observability(self) -> None:
         from fastapi.testclient import TestClient
+        from investment_agents.tools.base import ToolResult
+        from investment_agents.tools.web_search import WebSearchTool
 
         import agent_api
 
@@ -1048,11 +1077,11 @@ class ApiContractTests(unittest.TestCase):
 
         agents = client.get("/agents")
         self.assertEqual(agents.status_code, 200)
-        self.assertEqual(len(agents.json()), 3)
+        self.assertEqual(len(agents.json()), 4)
 
         readiness = client.get("/tools/readiness")
         self.assertEqual(readiness.status_code, 200)
-        self.assertEqual(len(readiness.json()), 3)
+        self.assertEqual(len(readiness.json()), 4)
 
         observability_status = client.get("/observability/status")
         self.assertEqual(observability_status.status_code, 200)
@@ -1062,10 +1091,19 @@ class ApiContractTests(unittest.TestCase):
         self.assertEqual(storage_status.status_code, 200)
         self.assertIn("db_path", storage_status.json())
 
-        chat = client.post(
-            "/chat",
-            json={"message": "Review my portfolio loss and AAPL news sentiment"},
-        )
+        with patch.object(
+            WebSearchTool,
+            "search",
+            return_value=ToolResult(
+                tool_name="web_search",
+                summary="No web references in this test.",
+                data={"citations": []},
+            ),
+        ):
+            chat = client.post(
+                "/chat",
+                json={"message": "Review my portfolio loss and AAPL news sentiment"},
+            )
         self.assertEqual(chat.status_code, 200)
         payload = chat.json()
         self.assertEqual(payload["routing_decision"]["symbols"], ["AAPL"])
@@ -1075,9 +1113,11 @@ class ApiContractTests(unittest.TestCase):
                 "ledger_interpretation_agent",
                 "finnhub_investment_agent",
                 "alphavantage_research_agent",
+                "web_search_agent",
             ],
         )
         self.assertIn("source_notes", payload)
+        self.assertIn("citations", payload)
         self.assertTrue(payload["source_notes"])
         self.assertIn(
             "needs_configuration",

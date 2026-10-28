@@ -225,7 +225,7 @@ with trace_tab:
         with st.expander("Agent results"):
             st.json(st.session_state.last_agent_results)
 
-if prompt := st.chat_input("Ask about tickers, your ledger, news, sentiment, or macro risk"):
+if prompt := st.chat_input("Ask about a ticker, currency, market trend, or news"):
     with chat_tab:
         with st.chat_message("user"):
             st.write(prompt)
@@ -243,7 +243,7 @@ if prompt := st.chat_input("Ask about tickers, your ledger, news, sentiment, or 
                         _api_url(),
                         result["trace_id"],
                     )
-                    st.write(result["reply"])
+                    st.markdown(result["reply"])
                     st.caption(
                         f"{result['elapsed_seconds']:.2f}s | trace {result['trace_id']} | "
                         f"agents: {', '.join(result['selected_agents'])}"
