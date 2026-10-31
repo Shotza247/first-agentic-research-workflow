@@ -7,8 +7,6 @@ from time import perf_counter
 from typing import Any, Callable
 
 from dotenv import load_dotenv
-from huggingface_hub import login
-from transformers import pipeline
 
 from investment_agents.core.messages import (
     DEFAULT_MAX_NEW_TOKENS,
@@ -56,6 +54,8 @@ def load_huggingface_token(
         return None
 
     try:
+        from huggingface_hub import login
+
         login(token=token)
     except Exception as exc:  # pragma: no cover - depends on local HF state/network.
         if warn:
@@ -74,6 +74,8 @@ def create_text_generation_pipeline(
     """Create the local text-generation pipeline used by frontends and agents."""
     ensure_runtime_dependencies()
     load_huggingface_token(hf_token=hf_token, warn=warn)
+    from transformers import pipeline
+
     return pipeline(task="text-generation", model=model_id, dtype="auto")
 
 
