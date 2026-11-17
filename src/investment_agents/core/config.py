@@ -84,7 +84,7 @@ class Settings:
     openai_api_key: str | None = field(default_factory=lambda: _optional_env("OPENAI_API_KEY"))
     openai_model: str | None = field(default_factory=lambda: _optional_env("OPENAI_MODEL"))
     llm_max_output_tokens: int = field(default_factory=lambda: _int_env("LLM_MAX_OUTPUT_TOKENS", "700"))
-    agent_api_url: str = field(default_factory=lambda: os.getenv("AGENT_API_URL", "http://localhost:8000"))
+    agent_api_url: str = field(default_factory=lambda: os.getenv("AGENT_API_URL", "http://localhost:8001"))
     cors_origins: list[str] | None = None
     finnhub_api_key: str | None = field(default_factory=lambda: _optional_env("FINNHUB_API_KEY"))
     alphavantage_api_key: str | None = field(default_factory=lambda: _optional_env("ALPHAVANTAGE_API_KEY"))
@@ -96,6 +96,12 @@ class Settings:
     observability_log_path: str | None = field(default_factory=lambda: _optional_env("OBSERVABILITY_LOG_PATH"))
     observability_max_events: int = field(
         default_factory=lambda: _int_env("OBSERVABILITY_MAX_EVENTS", "500")
+    )
+    observability_max_bytes: int = field(
+        default_factory=lambda: max(1, _int_env("OBSERVABILITY_MAX_BYTES", "10485760"))
+    )
+    observability_backup_count: int = field(
+        default_factory=lambda: max(0, _int_env("OBSERVABILITY_BACKUP_COUNT", "5"))
     )
     storage_db_path: str = field(
         default_factory=lambda: os.getenv("STORAGE_DB_PATH", "data/investment_agents.duckdb")

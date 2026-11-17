@@ -14,7 +14,7 @@ The repository also contains earlier investment-analysis scaffolding. The defaul
 CLI and API still use keyword routing and template summaries. Local Hugging Face
 chat runs separately with `--local-llm`.
 
-Documentation reconciled with source on 2026-09-16. LangChain,
+Documentation reconciled with source on 2026-11-17. LangChain,
 `langchain-huggingface`, and LangGraph are declared dependencies only: the runtime
 does not import them or construct a graph. The local model uses Transformers.
 
@@ -26,12 +26,17 @@ does not import them or construct a graph. The local model uses Transformers.
 - [Investigation history](AUDIT_LOG.md)
 
 ```text
-first_agent.py           CLI launcher and compatibility imports
-agent_api.py             FastAPI launcher
-streamlit_frontend.py    Streamlit launcher
-src/investment_agents/   Existing Python package
-tests/                  Automated behavior and API contract tests
-docs/                   Architecture, setup, and system-prompt documentation
+scripts/                 CLI, FastAPI, and Streamlit launchers
+src/investment_agents/   Application package
+  agents/                Routing and specialist agents
+  api/                   FastAPI routes and contracts
+  core/                  Configuration, chat, and observability
+  domain/                Financial data models and calculations
+  storage/               DuckDB persistence
+  tools/                  External data adapters
+  ui/                     Streamlit UI and trace presentation
+tests/                   Automated behavior and API contract tests
+docs/                    Architecture, setup, and system-prompt documentation
 ```
 
 ## Run
@@ -53,27 +58,27 @@ the response-generation path. Setting them does not activate an LLM in the API.
 In one terminal, start FastAPI:
 
 ```powershell
-.venv\Scripts\python.exe -m uvicorn agent_api:app --reload --port 8001
+.venv\Scripts\python.exe -m uvicorn agent_api:app --app-dir scripts --reload --port 8001
 ```
 
 In another terminal, point Streamlit at that API:
 
 ```powershell
-$env:AGENT_API_URL = "http://localhost:8001"
-.venv\Scripts\python.exe -m streamlit run streamlit_frontend.py --server.port 8501
+.venv\Scripts\python.exe -m streamlit run scripts\streamlit_frontend.py --server.port 8501
 ```
 
 API docs: http://localhost:8001/docs. Streamlit normally opens at
 http://localhost:8501. Port 8001 is an alternative to the previously blocked 8000;
-local Windows port restrictions may still apply.
+local Windows port restrictions may still apply. The UI defaults to the local API
+at `http://localhost:8001`; change the API URL in the Streamlit sidebar or set
+`AGENT_API_URL` if you run the API on a different port.
 
-Run the existing default CLI with `.venv\Scripts\python.exe first_agent.py`.
+Run the existing default CLI with `.venv\Scripts\python.exe scripts\first_agent.py`.
 Add `--local-llm` for the separate local model chat.
 
 To restart, press Ctrl+C in each service terminal and run its command again.
 Use **Clear conversation** in Streamlit to reset an old session's system message.
-The Streamlit API URL is read from the process environment or sidebar, so use the
-explicit environment assignment above rather than relying on `.env` for this UI setting.
+The Streamlit API URL is read from the process environment or sidebar.
 
 ## Quick Checks
 

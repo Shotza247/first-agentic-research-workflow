@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+
 from investment_agents.agents.alphavantage_agent import AlphaVantageResearchAgent
 from investment_agents.agents.base import AnalysisAgent
 from investment_agents.agents.finnhub_agent import FinnhubInvestmentAgent
@@ -109,4 +111,4 @@ class AgentRouter:
 
 
 def _contains_any(text: str, terms: set[str]) -> bool:
-    return any(term in text for term in terms)
+    return any(re.search(rf"(?<!\w){re.escape(term)}(?!\w)", text) for term in terms)

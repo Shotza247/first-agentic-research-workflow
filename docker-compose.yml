@@ -18,6 +18,8 @@ services:
       OBSERVABILITY_ENABLED: ${OBSERVABILITY_ENABLED:-true}
       OBSERVABILITY_LOG_PATH: ${OBSERVABILITY_LOG_PATH:-/app/data/observability/events.jsonl}
       OBSERVABILITY_MAX_EVENTS: ${OBSERVABILITY_MAX_EVENTS:-500}
+      OBSERVABILITY_MAX_BYTES: ${OBSERVABILITY_MAX_BYTES:-10485760}
+      OBSERVABILITY_BACKUP_COUNT: ${OBSERVABILITY_BACKUP_COUNT:-5}
       STORAGE_DB_PATH: ${STORAGE_DB_PATH:-/app/data/investment_agents.duckdb}
       MARKET_CACHE_TTL_SECONDS: ${MARKET_CACHE_TTL_SECONDS:-900}
       MAX_ENRICHMENT_SYMBOLS: ${MAX_ENRICHMENT_SYMBOLS:-3}
@@ -26,19 +28,19 @@ services:
       REPORTING_CURRENCY: ${REPORTING_CURRENCY:-USD}
       STATIC_FX_RATES: ${STATIC_FX_RATES:-}
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     volumes:
       - agent-data:/app/data
 
   streamlit:
     build: .
-    command: streamlit run streamlit_frontend.py --server.address 0.0.0.0 --server.port 8501
+    command: streamlit run scripts/streamlit_frontend.py --server.address 0.0.0.0 --server.port 8501
     environment:
       PYTHONPATH: /app/src
       AGENT_API_URL: http://api:8000
       APP_ENV: docker
     ports:
-      - "8501:8501"
+      - "127.0.0.1:8501:8501"
     depends_on:
       - api
 

@@ -4,6 +4,13 @@ This file preserves dated investigation history. Earlier entries describe the co
 at that time and may no longer describe current behavior. For current architecture
 and setup, use [README.md](README.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
+## 2026-11-17 - Launcher Structure Cleanup
+
+- Grouped the CLI, FastAPI, and Streamlit launcher scripts under `scripts/`.
+- Updated local and Docker launch commands, Streamlit tests, and architecture/setup
+  documentation to match the new layout.
+- Application implementation remains in `src/investment_agents/`.
+
 ## 2026-09-16 - Documentation Consolidation
 
 - Release verification: `.venv\Scripts\python.exe -m unittest discover -s tests -v`
@@ -961,3 +968,85 @@ _Last update: 2026-09-05T21:46:29+02:00_
   either is operational. Verify full Docker build and browser chat independently.
 
 _Documentation reconciliation: 2026-09-15. Earlier entries above are historical._
+
+## 2026-11-01 - Bounded Observability Retention
+
+- Status: implemented; local verification passed.
+- Severity: Medium.
+- Affected files: `src/investment_agents/core/observability.py`,
+  `src/investment_agents/core/config.py`, `src/investment_agents/api/app.py`,
+  `docker-compose.yml`, `.env.example`, `docs/SETUP.md`, and
+  `tests/test_multi_agent_architecture.py`.
+- Finding: Persistent JSONL observability events grew without limit, and listing
+  recent events parsed the full log on each request. Events are intentionally
+  retained to support personal agent analysis and improvement.
+- Action taken:
+  - Added size-based JSONL rotation with a 10 MiB active log and five retained
+    backups by default (about 60 MiB total); both limits are configurable.
+  - Kept trace-ID lookups searching all retained log segments.
+  - Changed unfiltered event listing to read only the newest events needed for
+    the response.
+  - Ensured clearing persisted logs removes the active file and its backups.
+- Verification: focused architecture and observability test suite and
+  `docker compose config` passed.
+- Notes: Increase `OBSERVABILITY_MAX_BYTES` and/or
+  `OBSERVABILITY_BACKUP_COUNT` in `.env` if a longer local history is needed.
+
+## 2026-11-01 - Streamlit API Flow Default
+
+- Status: fixed; regression test added.
+- Severity: Medium.
+- Affected files: `src/investment_agents/ui/streamlit_app.py`,
+  `src/investment_agents/core/config.py`, `.env.example`, `README.md`,
+  `docs/SETUP.md`, and `tests/test_multi_agent_architecture.py`.
+- Finding: The local CLI invokes the orchestrator directly, but Streamlit depends
+  on the FastAPI service. Streamlit defaulted to `http://localhost:8000` while
+  local setup instructions run the API on port `8001`, so the UI could not reach
+  the working agent unless the endpoint was manually changed.
+- Action taken:
+  - Aligned the Streamlit and shared settings defaults and `.env.example` with
+    the documented local API port 8001. Docker continues to set its internal
+    API endpoint explicitly to `http://api:8000`.
+  - Migrated existing Streamlit session state using the former localhost:8000
+    default to the new local default.
+  - Added an actionable API startup/URL hint when a chat request cannot connect.
+  - Updated setup documentation and added a settings-default regression test.
+- Notes: If FastAPI is running on another port, set `AGENT_API_URL` or update
+  the sidebar URL.
+
+## 2026-11-01 - Market Query Routing and Trace Rendering
+
+- Status: routing fix and UI rendering fix implemented; regression tests pass.
+- Severity: Medium.
+- Affected files: `src/investment_agents/agents/routing.py`,
+  `src/investment_agents/ui/streamlit_app.py`, and
+  `tests/test_multi_agent_architecture.py`.
+- Findings:
+  - The market query “What are the latest market trends for AAPL?” was
+    incorrectly routed to the ledger agent because the ledger keyword `pl`
+    matched inside `AAPL`.
+  - The API recorded trace events, but the Streamlit Trace tab was rendered
+    before the chat submission updated session state, leaving the view empty
+    until a later rerun.
+  - During the market-query test, Finnhub returned a quote, Alpha Vantage was
+    rate-limited and fell back to cached news dated 2026-09-27, and web search
+    returned no source-linked results. “Latest” answers must not imply that
+    these stale or missing sources are current.
+- Actions taken:
+  - Changed router keyword matching to token boundaries and added an AAPL
+    regression test.
+  - Process chat submissions before rendering the Chat and Trace tabs, so the
+    new trace and elapsed-time caption are available in the same render.
+  - Kept chat responses visible if fetching trace events fails, and surface
+    that trace-fetch error separately.
+  - Added an AppTest regression test confirming a successful chat submission
+    stores and renders its trace before the tab contents are created.
+- Verification: all 51 tests passed, including the routing and UI regression
+  tests; Python compilation and `git diff --check` passed. The local API health
+  endpoint returned healthy and the Streamlit health endpoint returned `ok` on
+  port 8502. A second live browser submission was inconclusive because the
+  integrated browser could not stabilize the submit control; the AppTest
+  regression covers the ordering/state bug.
+- Follow-up: ensure provider responses clearly distinguish fresh data, stale
+  cache, rate limits, and absent search sources before presenting market
+  conclusions.

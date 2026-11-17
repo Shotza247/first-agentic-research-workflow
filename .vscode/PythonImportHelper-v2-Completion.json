@@ -24,117 +24,251 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "Lock",
-        "importPath": "threading",
-        "description": "threading",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "threading",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "HTTPException",
-        "importPath": "fastapi",
-        "description": "fastapi",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "CORSMiddleware",
-        "importPath": "fastapi.middleware.cors",
-        "description": "fastapi.middleware.cors",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "fastapi.middleware.cors",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "ChatMessage",
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "first_agent",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "DEFAULT_MODEL_ID",
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "first_agent",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "FirstAgent",
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "first_agent",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "initial_chat",
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "first_agent",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "DEFAULT_MODEL_ID",
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "first_agent",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "initial_chat",
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "first_agent",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -154,11 +288,475 @@
         "documentation": {}
     },
     {
-        "label": "perf_counter",
-        "importPath": "time",
-        "description": "time",
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
         "isExtraImport": true,
-        "detail": "time",
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "AgentResult",
+        "importPath": "investment_agents.agents.base",
+        "description": "investment_agents.agents.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "AgentResult",
+        "importPath": "investment_agents.agents.base",
+        "description": "investment_agents.agents.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "AgentResult",
+        "importPath": "investment_agents.agents.base",
+        "description": "investment_agents.agents.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "AgentResult",
+        "importPath": "investment_agents.agents.base",
+        "description": "investment_agents.agents.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "AnalysisAgent",
+        "importPath": "investment_agents.agents.base",
+        "description": "investment_agents.agents.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "investment_agents.core.config",
+        "description": "investment_agents.core.config",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "event_recorder",
+        "importPath": "investment_agents.core.observability",
+        "description": "investment_agents.core.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "event_recorder",
+        "importPath": "investment_agents.core.observability",
+        "description": "investment_agents.core.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "event_recorder",
+        "importPath": "investment_agents.core.observability",
+        "description": "investment_agents.core.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "event_recorder",
+        "importPath": "investment_agents.core.observability",
+        "description": "investment_agents.core.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "event_recorder",
+        "importPath": "investment_agents.core.observability",
+        "description": "investment_agents.core.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "extract_ticker_symbols",
+        "importPath": "investment_agents.domain.tickers",
+        "description": "investment_agents.domain.tickers",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.tickers",
+        "documentation": {}
+    },
+    {
+        "label": "extract_ticker_symbols",
+        "importPath": "investment_agents.domain.tickers",
+        "description": "investment_agents.domain.tickers",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.tickers",
+        "documentation": {}
+    },
+    {
+        "label": "extract_ticker_symbols",
+        "importPath": "investment_agents.domain.tickers",
+        "description": "investment_agents.domain.tickers",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.tickers",
+        "documentation": {}
+    },
+    {
+        "label": "AlphaVantageResearchTool",
+        "importPath": "investment_agents.tools.alphavantage",
+        "description": "investment_agents.tools.alphavantage",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.alphavantage",
+        "documentation": {}
+    },
+    {
+        "label": "AlphaVantageResearchTool",
+        "importPath": "investment_agents.tools.alphavantage",
+        "description": "investment_agents.tools.alphavantage",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.alphavantage",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Protocol",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -186,6 +784,512 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Mapping",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Mapping",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "FinnhubInvestmentTool",
+        "importPath": "investment_agents.tools.finnhub",
+        "description": "investment_agents.tools.finnhub",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.finnhub",
+        "documentation": {}
+    },
+    {
+        "label": "FinnhubInvestmentTool",
+        "importPath": "investment_agents.tools.finnhub",
+        "description": "investment_agents.tools.finnhub",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.finnhub",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleSheetsLedgerTool",
+        "importPath": "investment_agents.tools.google_sheets_ledger",
+        "description": "investment_agents.tools.google_sheets_ledger",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.google_sheets_ledger",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleSheetsLedgerTool",
+        "importPath": "investment_agents.tools.google_sheets_ledger",
+        "description": "investment_agents.tools.google_sheets_ledger",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.google_sheets_ledger",
+        "documentation": {}
+    },
+    {
+        "label": "perf_counter",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "perf_counter",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "AlphaVantageResearchAgent",
+        "importPath": "investment_agents.agents.alphavantage_agent",
+        "description": "investment_agents.agents.alphavantage_agent",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.alphavantage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "AlphaVantageResearchAgent",
+        "importPath": "investment_agents.agents.alphavantage_agent",
+        "description": "investment_agents.agents.alphavantage_agent",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.alphavantage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "FinnhubInvestmentAgent",
+        "importPath": "investment_agents.agents.finnhub_agent",
+        "description": "investment_agents.agents.finnhub_agent",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.finnhub_agent",
+        "documentation": {}
+    },
+    {
+        "label": "FinnhubInvestmentAgent",
+        "importPath": "investment_agents.agents.finnhub_agent",
+        "description": "investment_agents.agents.finnhub_agent",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.finnhub_agent",
+        "documentation": {}
+    },
+    {
+        "label": "LedgerInterpretationAgent",
+        "importPath": "investment_agents.agents.ledger_agent",
+        "description": "investment_agents.agents.ledger_agent",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.ledger_agent",
+        "documentation": {}
+    },
+    {
+        "label": "LedgerInterpretationAgent",
+        "importPath": "investment_agents.agents.ledger_agent",
+        "description": "investment_agents.agents.ledger_agent",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.ledger_agent",
+        "documentation": {}
+    },
+    {
+        "label": "AgentRouter",
+        "importPath": "investment_agents.agents.routing",
+        "description": "investment_agents.agents.routing",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.routing",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MODEL_ID",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "initial_chat",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MAX_NEW_TOKENS",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MODEL_ID",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_SYSTEM_PROMPT",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "initial_chat",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "initial_chat",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "initial_chat",
+        "importPath": "investment_agents.core.messages",
+        "description": "investment_agents.core.messages",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "RouteDecision",
+        "importPath": "investment_agents.domain.models",
+        "description": "investment_agents.domain.models",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.models",
+        "documentation": {}
+    },
+    {
+        "label": "AnalysisFocus",
+        "importPath": "investment_agents.domain.models",
+        "description": "investment_agents.domain.models",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.models",
+        "documentation": {}
+    },
+    {
+        "label": "RouteDecision",
+        "importPath": "investment_agents.domain.models",
+        "description": "investment_agents.domain.models",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.models",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "importPath": "investment_agents.tools.registry",
+        "description": "investment_agents.tools.registry",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "importPath": "investment_agents.tools.registry",
+        "description": "investment_agents.tools.registry",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "importPath": "investment_agents.tools.registry",
+        "description": "investment_agents.tools.registry",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "Lock",
+        "importPath": "threading",
+        "description": "threading",
+        "isExtraImport": true,
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "Lock",
+        "importPath": "threading",
+        "description": "threading",
+        "isExtraImport": true,
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "OrchestratorAgent",
+        "importPath": "investment_agents.agents.orchestrator",
+        "description": "investment_agents.agents.orchestrator",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.orchestrator",
+        "documentation": {}
+    },
+    {
+        "label": "OrchestratorAgent",
+        "importPath": "investment_agents.agents.orchestrator",
+        "description": "investment_agents.agents.orchestrator",
+        "isExtraImport": true,
+        "detail": "investment_agents.agents.orchestrator",
+        "documentation": {}
+    },
+    {
+        "label": "AgentCard",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ChatRequest",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ChatResponse",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "HealthResponse",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ObservabilityStatusResponse",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "StorageStatusResponse",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "TraceEventResponse",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ToolReadinessCard",
+        "importPath": "investment_agents.api.schemas",
+        "description": "investment_agents.api.schemas",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "find_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "load_dotenv",
         "importPath": "dotenv",
         "description": "dotenv",
@@ -210,12 +1314,526 @@
         "documentation": {}
     },
     {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidOperation",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidOperation",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidOperation",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_CURRENCY",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_or_zero",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_currency",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "optional_decimal",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_CURRENCY",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_or_zero",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_currency",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "optional_decimal",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_CURRENCY",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_currency",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "optional_decimal",
+        "importPath": "investment_agents.domain.money",
+        "description": "investment_agents.domain.money",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "requests",
         "description": "requests",
         "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "MarketDataCache",
+        "importPath": "investment_agents.storage.market_cache",
+        "description": "investment_agents.storage.market_cache",
+        "isExtraImport": true,
+        "detail": "investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "utc_now_iso",
+        "importPath": "investment_agents.storage.market_cache",
+        "description": "investment_agents.storage.market_cache",
+        "isExtraImport": true,
+        "detail": "investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "MarketDataCache",
+        "importPath": "investment_agents.storage.market_cache",
+        "description": "investment_agents.storage.market_cache",
+        "isExtraImport": true,
+        "detail": "investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "utc_now_iso",
+        "importPath": "investment_agents.storage.market_cache",
+        "description": "investment_agents.storage.market_cache",
+        "isExtraImport": true,
+        "detail": "investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "MarketDataCache",
+        "importPath": "investment_agents.storage.market_cache",
+        "description": "investment_agents.storage.market_cache",
+        "isExtraImport": true,
+        "detail": "investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "MarketDataCache",
+        "importPath": "investment_agents.storage.market_cache",
+        "description": "investment_agents.storage.market_cache",
+        "isExtraImport": true,
+        "detail": "investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "ToolReadiness",
+        "importPath": "investment_agents.tools.base",
+        "description": "investment_agents.tools.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolResult",
+        "importPath": "investment_agents.tools.base",
+        "description": "investment_agents.tools.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolReadiness",
+        "importPath": "investment_agents.tools.base",
+        "description": "investment_agents.tools.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolResult",
+        "importPath": "investment_agents.tools.base",
+        "description": "investment_agents.tools.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolReadiness",
+        "importPath": "investment_agents.tools.base",
+        "description": "investment_agents.tools.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolResult",
+        "importPath": "investment_agents.tools.base",
+        "description": "investment_agents.tools.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolReadiness",
+        "importPath": "investment_agents.tools.base",
+        "description": "investment_agents.tools.base",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "provider_payload_error",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "provider_rate_limit",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "provider_request_error",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "rate_limit_message",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "provider_payload_error",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "provider_rate_limit",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "provider_request_error",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "rate_limit_message",
+        "importPath": "investment_agents.tools.provider_errors",
+        "description": "investment_agents.tools.provider_errors",
+        "isExtraImport": true,
+        "detail": "investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "parse_ledger_rows",
+        "importPath": "investment_agents.domain.ledger",
+        "description": "investment_agents.domain.ledger",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "summarize_transactions",
+        "importPath": "investment_agents.domain.ledger",
+        "description": "investment_agents.domain.ledger",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "parse_holding_rows",
+        "importPath": "investment_agents.domain.portfolio",
+        "description": "investment_agents.domain.portfolio",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "summarize_holdings",
+        "importPath": "investment_agents.domain.portfolio",
+        "description": "investment_agents.domain.portfolio",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "parse_watchlist_rows",
+        "importPath": "investment_agents.domain.watchlist",
+        "description": "investment_agents.domain.watchlist",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.watchlist",
+        "documentation": {}
+    },
+    {
+        "label": "summarize_watchlist",
+        "importPath": "investment_agents.domain.watchlist",
+        "description": "investment_agents.domain.watchlist",
+        "isExtraImport": true,
+        "detail": "investment_agents.domain.watchlist",
         "documentation": {}
     },
     {
@@ -228,218 +1846,1413 @@
         "documentation": {}
     },
     {
-        "label": "ChatRequest",
-        "kind": 6,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "class ChatRequest(BaseModel):\n    message: str = Field(..., min_length=1)\n    chat: list[ChatMessage] | None = None\n    max_new_tokens: int | None = Field(default=None, ge=1, le=2048)\nclass ChatResponse(BaseModel):\n    reply: str\n    chat: list[ChatMessage]\n    elapsed_seconds: float\n    model_id: str\nclass HealthResponse(BaseModel):",
-        "detail": "agent_api",
+        "label": "data_source_attention_count",
+        "importPath": "investment_agents.ui.observability",
+        "description": "investment_agents.ui.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.ui.observability",
         "documentation": {}
     },
     {
-        "label": "ChatResponse",
-        "kind": 6,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "class ChatResponse(BaseModel):\n    reply: str\n    chat: list[ChatMessage]\n    elapsed_seconds: float\n    model_id: str\nclass HealthResponse(BaseModel):\n    status: str\n    model_id: str\napp = FastAPI(\n    title=\"First Agent API\",",
-        "detail": "agent_api",
+        "label": "data_source_status_rows",
+        "importPath": "investment_agents.ui.observability",
+        "description": "investment_agents.ui.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.ui.observability",
         "documentation": {}
     },
     {
-        "label": "HealthResponse",
+        "label": "event_table_rows",
+        "importPath": "investment_agents.ui.observability",
+        "description": "investment_agents.ui.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "portfolio_alert_rows",
+        "importPath": "investment_agents.ui.observability",
+        "description": "investment_agents.ui.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "source_note_rows",
+        "importPath": "investment_agents.ui.observability",
+        "description": "investment_agents.ui.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "trace_metrics",
+        "importPath": "investment_agents.ui.observability",
+        "description": "investment_agents.ui.observability",
+        "isExtraImport": true,
+        "detail": "investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
         "kind": 6,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "class HealthResponse(BaseModel):\n    status: str\n    model_id: str\napp = FastAPI(\n    title=\"First Agent API\",\n    description=\"HTTP API for the reusable FirstAgent service layer.\",\n    version=\"0.1.0\",\n)\napp.add_middleware(\n    CORSMiddleware,",
-        "detail": "agent_api",
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "run_cli",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "# noqa: E402",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "F401\n    AgentResponse",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "FirstAgent",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "create_text_generation_pipeline",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "initial_chat",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "parse_pipeline_response",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "run_cli",
+        "importPath": "investment_agents.core.chat",
+        "description": "investment_agents.core.chat",
+        "isExtraImport": true,
+        "detail": "investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "investment_agents.api.app",
+        "description": "investment_agents.api.app",
+        "isExtraImport": true,
+        "detail": "investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "importPath": "investment_agents.cli",
+        "description": "investment_agents.cli",
+        "isExtraImport": true,
+        "detail": "investment_agents.cli",
+        "documentation": {}
+    },
+    {
+        "label": "run_orchestrator_cli",
+        "importPath": "investment_agents.cli",
+        "description": "investment_agents.cli",
+        "isExtraImport": true,
+        "detail": "investment_agents.cli",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit_app",
+        "importPath": "investment_agents.ui",
+        "description": "investment_agents.ui",
+        "isExtraImport": true,
+        "detail": "investment_agents.ui",
+        "documentation": {}
+    },
+    {
+        "label": "AlphaVantageResearchAgent",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.alphavantage_agent",
+        "description": "src.investment_agents.agents.alphavantage_agent",
+        "peekOfCode": "class AlphaVantageResearchAgent:\n    name = \"alphavantage_research_agent\"\n    description = \"Researches ticker news, sentiment, macro context, and event risk.\"\n    def __init__(self, tool: AlphaVantageResearchTool, settings: Settings | None = None) -> None:\n        self.tool = tool\n        self.settings = settings or get_settings()\n    def _symbols_for_analysis(\n        self,\n        question: str,\n        symbols: list[str] | None = None,",
+        "detail": "src.investment_agents.agents.alphavantage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "AgentResult",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.base",
+        "description": "src.investment_agents.agents.base",
+        "peekOfCode": "class AgentResult:\n    agent_name: str\n    task: str\n    summary: str\n    observations: list[str] = field(default_factory=list)\n    tool_calls: list[dict[str, Any]] = field(default_factory=list)\n    metadata: dict[str, Any] = field(default_factory=dict)\n    def to_dict(self) -> dict[str, Any]:\n        return asdict(self)\nclass AnalysisAgent(Protocol):",
+        "detail": "src.investment_agents.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "AnalysisAgent",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.base",
+        "description": "src.investment_agents.agents.base",
+        "peekOfCode": "class AnalysisAgent(Protocol):\n    name: str\n    description: str\n    def analyze(\n        self,\n        question: str,\n        trace_id: str,\n        symbols: list[str] | None = None,\n    ) -> AgentResult:\n        ...",
+        "detail": "src.investment_agents.agents.base",
+        "documentation": {}
+    },
+    {
+        "label": "FinnhubInvestmentAgent",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.finnhub_agent",
+        "description": "src.investment_agents.agents.finnhub_agent",
+        "peekOfCode": "class FinnhubInvestmentAgent:\n    name = \"finnhub_investment_agent\"\n    description = \"Analyzes ticker-level market data, price action, and investment signals.\"\n    def __init__(self, tool: FinnhubInvestmentTool, settings: Settings | None = None) -> None:\n        self.tool = tool\n        self.settings = settings or get_settings()\n    def _symbols_for_analysis(\n        self,\n        question: str,\n        symbols: list[str] | None = None,",
+        "detail": "src.investment_agents.agents.finnhub_agent",
+        "documentation": {}
+    },
+    {
+        "label": "LedgerInterpretationAgent",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.ledger_agent",
+        "description": "src.investment_agents.agents.ledger_agent",
+        "peekOfCode": "class LedgerInterpretationAgent:\n    name = \"ledger_interpretation_agent\"\n    description = \"Interprets portfolio ledger activity, profit/loss, allocation, and exposure.\"\n    def __init__(self, tool: GoogleSheetsLedgerTool) -> None:\n        self.tool = tool\n    def analyze(\n        self,\n        question: str,\n        trace_id: str,\n        symbols: list[str] | None = None,",
+        "detail": "src.investment_agents.agents.ledger_agent",
+        "documentation": {}
+    },
+    {
+        "label": "SourceNote",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.orchestrator",
+        "description": "src.investment_agents.agents.orchestrator",
+        "peekOfCode": "class SourceNote:\n    agent_name: str\n    status: str\n    message: str\n    tool_name: str = \"\"\n    symbol: str = \"\"\n    provider_symbol: str = \"\"\n    cache_status: str = \"\"\n    fetched_at: str = \"\"\n    stale_fetched_at: str = \"\"",
+        "detail": "src.investment_agents.agents.orchestrator",
+        "documentation": {}
+    },
+    {
+        "label": "OrchestratorResponse",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.orchestrator",
+        "description": "src.investment_agents.agents.orchestrator",
+        "peekOfCode": "class OrchestratorResponse:\n    reply: str\n    chat: list[ChatMessage]\n    elapsed_seconds: float\n    model_id: str\n    trace_id: str\n    selected_agents: list[str]\n    agent_results: list[dict]\n    routing_decision: dict\n    source_notes: list[dict[str, str]]",
+        "detail": "src.investment_agents.agents.orchestrator",
+        "documentation": {}
+    },
+    {
+        "label": "OrchestratorAgent",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.orchestrator",
+        "description": "src.investment_agents.agents.orchestrator",
+        "peekOfCode": "class OrchestratorAgent:\n    name = \"orchestrator_agent\"\n    description = \"Routes investment analytics questions to specialist agents and synthesizes findings.\"\n    def __init__(\n        self,\n        ledger_agent: LedgerInterpretationAgent,\n        finnhub_agent: FinnhubInvestmentAgent,\n        alphavantage_agent: AlphaVantageResearchAgent,\n        model_id: str = DEFAULT_MODEL_ID,\n    ) -> None:",
+        "detail": "src.investment_agents.agents.orchestrator",
+        "documentation": {}
+    },
+    {
+        "label": "ATTENTION_STATUSES",
+        "kind": 5,
+        "importPath": "src.investment_agents.agents.orchestrator",
+        "description": "src.investment_agents.agents.orchestrator",
+        "peekOfCode": "ATTENTION_STATUSES = {\n    \"malformed_response\",\n    \"needs_configuration\",\n    \"needs_symbol\",\n    \"provider_error\",\n    \"rate_limited\",\n    \"stale_cache\",\n}\ndef _source_status_notes(results: list[AgentResult]) -> list[SourceNote]:\n    notes: list[SourceNote] = []",
+        "detail": "src.investment_agents.agents.orchestrator",
+        "documentation": {}
+    },
+    {
+        "label": "AgentRouter",
+        "kind": 6,
+        "importPath": "src.investment_agents.agents.routing",
+        "description": "src.investment_agents.agents.routing",
+        "peekOfCode": "class AgentRouter:\n    \"\"\"Keyword/symbol router that can later be replaced by an LLM classifier.\"\"\"\n    def __init__(\n        self,\n        ledger_agent: LedgerInterpretationAgent,\n        finnhub_agent: FinnhubInvestmentAgent,\n        alphavantage_agent: AlphaVantageResearchAgent,\n    ) -> None:\n        self.ledger_agent = ledger_agent\n        self.finnhub_agent = finnhub_agent",
+        "detail": "src.investment_agents.agents.routing",
+        "documentation": {}
+    },
+    {
+        "label": "LEDGER_TERMS",
+        "kind": 5,
+        "importPath": "src.investment_agents.agents.routing",
+        "description": "src.investment_agents.agents.routing",
+        "peekOfCode": "LEDGER_TERMS = {\n    \"ledger\",\n    \"portfolio\",\n    \"holding\",\n    \"holdings\",\n    \"watchlist\",\n    \"watch list\",\n    \"monitored\",\n    \"ideas\",\n    \"profit\",",
+        "detail": "src.investment_agents.agents.routing",
+        "documentation": {}
+    },
+    {
+        "label": "MARKET_TERMS",
+        "kind": 5,
+        "importPath": "src.investment_agents.agents.routing",
+        "description": "src.investment_agents.agents.routing",
+        "peekOfCode": "MARKET_TERMS = {\"ticker\", \"tickers\", \"price\", \"quote\", \"finnhub\", \"analyst\", \"investment\", \"market\", \"valuation\"}\nRESEARCH_TERMS = {\"news\", \"sentiment\", \"research\", \"macro\", \"political\", \"politics\", \"economic\", \"economics\", \"alphavantage\", \"alpha vantage\", \"event\", \"events\"}\nclass AgentRouter:\n    \"\"\"Keyword/symbol router that can later be replaced by an LLM classifier.\"\"\"\n    def __init__(\n        self,\n        ledger_agent: LedgerInterpretationAgent,\n        finnhub_agent: FinnhubInvestmentAgent,\n        alphavantage_agent: AlphaVantageResearchAgent,\n    ) -> None:",
+        "detail": "src.investment_agents.agents.routing",
+        "documentation": {}
+    },
+    {
+        "label": "RESEARCH_TERMS",
+        "kind": 5,
+        "importPath": "src.investment_agents.agents.routing",
+        "description": "src.investment_agents.agents.routing",
+        "peekOfCode": "RESEARCH_TERMS = {\"news\", \"sentiment\", \"research\", \"macro\", \"political\", \"politics\", \"economic\", \"economics\", \"alphavantage\", \"alpha vantage\", \"event\", \"events\"}\nclass AgentRouter:\n    \"\"\"Keyword/symbol router that can later be replaced by an LLM classifier.\"\"\"\n    def __init__(\n        self,\n        ledger_agent: LedgerInterpretationAgent,\n        finnhub_agent: FinnhubInvestmentAgent,\n        alphavantage_agent: AlphaVantageResearchAgent,\n    ) -> None:\n        self.ledger_agent = ledger_agent",
+        "detail": "src.investment_agents.agents.routing",
         "documentation": {}
     },
     {
         "label": "health",
         "kind": 2,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "def health() -> HealthResponse:\n    return HealthResponse(status=\"ok\", model_id=DEFAULT_MODEL_ID)\n@app.post(\"/chat\", response_model=ChatResponse)\ndef chat(request: ChatRequest) -> ChatResponse:\n    try:\n        current_chat = request.chat or initial_chat()\n        with agent_lock:\n            result = agent.respond(\n                request.message,\n                chat=current_chat,",
-        "detail": "agent_api",
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "def health() -> HealthResponse:\n    return HealthResponse(\n        status=\"ok\",\n        app_name=settings.app_name,\n        environment=settings.environment,\n        model_id=settings.model_id,\n    )\n@app.get(\"/agents\", response_model=list[AgentCard])\ndef list_agents() -> list[AgentCard]:\n    return [AgentCard(**agent) for agent in orchestrator.available_agents()]",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "list_agents",
+        "kind": 2,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "def list_agents() -> list[AgentCard]:\n    return [AgentCard(**agent) for agent in orchestrator.available_agents()]\n@app.get(\"/tools/readiness\", response_model=list[ToolReadinessCard])\ndef tool_readiness() -> list[ToolReadinessCard]:\n    return [ToolReadinessCard(**item) for item in tool_registry.readiness_dicts()]\n@app.get(\"/storage/status\", response_model=StorageStatusResponse)\ndef storage_status() -> StorageStatusResponse:\n    return StorageStatusResponse(**tool_registry.storage_status())\n@app.post(\"/chat\", response_model=ChatResponse)\ndef chat(request: ChatRequest) -> ChatResponse:",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "tool_readiness",
+        "kind": 2,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "def tool_readiness() -> list[ToolReadinessCard]:\n    return [ToolReadinessCard(**item) for item in tool_registry.readiness_dicts()]\n@app.get(\"/storage/status\", response_model=StorageStatusResponse)\ndef storage_status() -> StorageStatusResponse:\n    return StorageStatusResponse(**tool_registry.storage_status())\n@app.post(\"/chat\", response_model=ChatResponse)\ndef chat(request: ChatRequest) -> ChatResponse:\n    try:\n        with orchestrator_lock:\n            result = orchestrator.respond(request.message, chat=request.chat)",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "storage_status",
+        "kind": 2,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "def storage_status() -> StorageStatusResponse:\n    return StorageStatusResponse(**tool_registry.storage_status())\n@app.post(\"/chat\", response_model=ChatResponse)\ndef chat(request: ChatRequest) -> ChatResponse:\n    try:\n        with orchestrator_lock:\n            result = orchestrator.respond(request.message, chat=request.chat)\n    except ValueError as exc:\n        raise HTTPException(status_code=400, detail=str(exc)) from exc\n    except RuntimeError as exc:",
+        "detail": "src.investment_agents.api.app",
         "documentation": {}
     },
     {
         "label": "chat",
         "kind": 2,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "def chat(request: ChatRequest) -> ChatResponse:\n    try:\n        current_chat = request.chat or initial_chat()\n        with agent_lock:\n            result = agent.respond(\n                request.message,\n                chat=current_chat,\n                max_new_tokens=request.max_new_tokens,\n            )\n    except ValueError as exc:",
-        "detail": "agent_api",
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "def chat(request: ChatRequest) -> ChatResponse:\n    try:\n        with orchestrator_lock:\n            result = orchestrator.respond(request.message, chat=request.chat)\n    except ValueError as exc:\n        raise HTTPException(status_code=400, detail=str(exc)) from exc\n    except RuntimeError as exc:\n        raise HTTPException(status_code=503, detail=str(exc)) from exc\n    except Exception as exc:\n        raise HTTPException(status_code=500, detail=f\"Agent error: {exc}\") from exc",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "list_events",
+        "kind": 2,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "def list_events(trace_id: str | None = Query(default=None)) -> TraceEventResponse:\n    return TraceEventResponse(events=event_recorder.list_events(trace_id=trace_id))\n@app.get(\"/observability/status\", response_model=ObservabilityStatusResponse)\ndef observability_status() -> ObservabilityStatusResponse:\n    return ObservabilityStatusResponse(**event_recorder.status())",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "observability_status",
+        "kind": 2,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "def observability_status() -> ObservabilityStatusResponse:\n    return ObservabilityStatusResponse(**event_recorder.status())",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "kind": 5,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "settings = get_settings()\nevent_recorder.configure(\n    enabled=settings.observability_enabled,\n    log_path=settings.observability_log_path,\n    max_events=settings.observability_max_events,\n)\ntool_registry = ToolRegistry.from_settings(settings)\norchestrator = OrchestratorAgent.from_tool_registry(tool_registry, model_id=settings.model_id)\norchestrator_lock = Lock()\napp = FastAPI(",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "tool_registry",
+        "kind": 5,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "tool_registry = ToolRegistry.from_settings(settings)\norchestrator = OrchestratorAgent.from_tool_registry(tool_registry, model_id=settings.model_id)\norchestrator_lock = Lock()\napp = FastAPI(\n    title=settings.app_name,\n    description=\"Investment analytics multi-agent API.\",\n    version=\"0.2.0\",\n)\napp.add_middleware(\n    CORSMiddleware,",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "orchestrator",
+        "kind": 5,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "orchestrator = OrchestratorAgent.from_tool_registry(tool_registry, model_id=settings.model_id)\norchestrator_lock = Lock()\napp = FastAPI(\n    title=settings.app_name,\n    description=\"Investment analytics multi-agent API.\",\n    version=\"0.2.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=settings.cors_origins,",
+        "detail": "src.investment_agents.api.app",
+        "documentation": {}
+    },
+    {
+        "label": "orchestrator_lock",
+        "kind": 5,
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "orchestrator_lock = Lock()\napp = FastAPI(\n    title=settings.app_name,\n    description=\"Investment analytics multi-agent API.\",\n    version=\"0.2.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=settings.cors_origins,\n    allow_credentials=True,",
+        "detail": "src.investment_agents.api.app",
         "documentation": {}
     },
     {
         "label": "app",
         "kind": 5,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "app = FastAPI(\n    title=\"First Agent API\",\n    description=\"HTTP API for the reusable FirstAgent service layer.\",\n    version=\"0.1.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=_allowed_origins(),\n    allow_credentials=True,\n    allow_methods=[\"GET\", \"POST\", \"OPTIONS\"],",
-        "detail": "agent_api",
+        "importPath": "src.investment_agents.api.app",
+        "description": "src.investment_agents.api.app",
+        "peekOfCode": "app = FastAPI(\n    title=settings.app_name,\n    description=\"Investment analytics multi-agent API.\",\n    version=\"0.2.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=settings.cors_origins,\n    allow_credentials=True,\n    allow_methods=[\"GET\", \"POST\", \"OPTIONS\"],",
+        "detail": "src.investment_agents.api.app",
         "documentation": {}
     },
     {
-        "label": "agent",
-        "kind": 5,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "agent = FirstAgent()\nagent_lock = Lock()\n@app.get(\"/health\", response_model=HealthResponse)\ndef health() -> HealthResponse:\n    return HealthResponse(status=\"ok\", model_id=DEFAULT_MODEL_ID)\n@app.post(\"/chat\", response_model=ChatResponse)\ndef chat(request: ChatRequest) -> ChatResponse:\n    try:\n        current_chat = request.chat or initial_chat()\n        with agent_lock:",
-        "detail": "agent_api",
+        "label": "ChatRequest",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class ChatRequest(BaseModel):\n    message: str = Field(..., min_length=1)\n    chat: list[ChatMessage] | None = None\nclass ChatResponse(BaseModel):\n    reply: str\n    chat: list[ChatMessage]\n    elapsed_seconds: float\n    model_id: str\n    trace_id: str\n    selected_agents: list[str]",
+        "detail": "src.investment_agents.api.schemas",
         "documentation": {}
     },
     {
-        "label": "agent_lock",
-        "kind": 5,
-        "importPath": "agent_api",
-        "description": "agent_api",
-        "peekOfCode": "agent_lock = Lock()\n@app.get(\"/health\", response_model=HealthResponse)\ndef health() -> HealthResponse:\n    return HealthResponse(status=\"ok\", model_id=DEFAULT_MODEL_ID)\n@app.post(\"/chat\", response_model=ChatResponse)\ndef chat(request: ChatRequest) -> ChatResponse:\n    try:\n        current_chat = request.chat or initial_chat()\n        with agent_lock:\n            result = agent.respond(",
-        "detail": "agent_api",
+        "label": "ChatResponse",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class ChatResponse(BaseModel):\n    reply: str\n    chat: list[ChatMessage]\n    elapsed_seconds: float\n    model_id: str\n    trace_id: str\n    selected_agents: list[str]\n    agent_results: list[dict[str, Any]]\n    routing_decision: dict[str, Any]\n    source_notes: list[dict[str, Any]] = Field(default_factory=list)",
+        "detail": "src.investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "HealthResponse",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class HealthResponse(BaseModel):\n    status: str\n    app_name: str\n    environment: str\n    model_id: str\nclass AgentCard(BaseModel):\n    name: str\n    description: str\nclass ToolReadinessCard(BaseModel):\n    tool_name: str",
+        "detail": "src.investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "AgentCard",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class AgentCard(BaseModel):\n    name: str\n    description: str\nclass ToolReadinessCard(BaseModel):\n    tool_name: str\n    configured: bool\n    status: str\n    missing_settings: list[str]\n    capabilities: list[str]\nclass TraceEventResponse(BaseModel):",
+        "detail": "src.investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ToolReadinessCard",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class ToolReadinessCard(BaseModel):\n    tool_name: str\n    configured: bool\n    status: str\n    missing_settings: list[str]\n    capabilities: list[str]\nclass TraceEventResponse(BaseModel):\n    events: list[dict[str, Any]]\nclass ObservabilityStatusResponse(BaseModel):\n    enabled: bool",
+        "detail": "src.investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "TraceEventResponse",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class TraceEventResponse(BaseModel):\n    events: list[dict[str, Any]]\nclass ObservabilityStatusResponse(BaseModel):\n    enabled: bool\n    persistent: bool\n    log_path: str | None\n    max_events: int\n    event_count: int\nclass StorageStatusResponse(BaseModel):\n    db_path: str",
+        "detail": "src.investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ObservabilityStatusResponse",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class ObservabilityStatusResponse(BaseModel):\n    enabled: bool\n    persistent: bool\n    log_path: str | None\n    max_events: int\n    event_count: int\nclass StorageStatusResponse(BaseModel):\n    db_path: str\n    exists: bool\n    raw_payload_count: int | None = None",
+        "detail": "src.investment_agents.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "StorageStatusResponse",
+        "kind": 6,
+        "importPath": "src.investment_agents.api.schemas",
+        "description": "src.investment_agents.api.schemas",
+        "peekOfCode": "class StorageStatusResponse(BaseModel):\n    db_path: str\n    exists: bool\n    raw_payload_count: int | None = None\n    curated_snapshot_count: int | None = None\n    fx_rate_count: int | None = None",
+        "detail": "src.investment_agents.api.schemas",
         "documentation": {}
     },
     {
         "label": "AgentResponse",
         "kind": 6,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "class AgentResponse:\n    \"\"\"Structured result returned by the reusable agent service layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str\n    elapsed_seconds: float\n    raw_response: Any = field(repr=False, default=None)\ndef initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by transformers.\"\"\"\n    return [{\"role\": \"system\", \"content\": system_prompt}]\ndef ensure_runtime_dependencies() -> None:",
-        "detail": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
+        "peekOfCode": "class AgentResponse:\n    \"\"\"Structured result returned by the reusable chat model layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str\n    elapsed_seconds: float\n    raw_response: Any = field(repr=False, default=None)\ndef ensure_runtime_dependencies() -> None:\n    \"\"\"Fail early with a clear message when local model dependencies are missing.\"\"\"\n    try:\n        import torchvision  # noqa: F401",
+        "detail": "src.investment_agents.core.chat",
         "documentation": {}
     },
     {
         "label": "FirstAgent",
         "kind": 6,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "class FirstAgent:\n    \"\"\"Reusable service object for CLI, Streamlit, FastAPI, or other frontends.\"\"\"\n    def __init__(\n        self,\n        model_id: str = DEFAULT_MODEL_ID,\n        max_new_tokens: int = DEFAULT_MAX_NEW_TOKENS,\n        system_prompt: str = DEFAULT_SYSTEM_PROMPT,\n        pipe: Any | None = None,\n        warn: WarningHandler | None = None,\n    ) -> None:",
-        "detail": "first_agent",
-        "documentation": {}
-    },
-    {
-        "label": "initial_chat",
-        "kind": 2,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "def initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by transformers.\"\"\"\n    return [{\"role\": \"system\", \"content\": system_prompt}]\ndef ensure_runtime_dependencies() -> None:\n    \"\"\"Fail early with a clear message when local model dependencies are missing.\"\"\"\n    try:\n        import torchvision  # noqa: F401\n    except ImportError as exc:\n        raise RuntimeError(\n            \"Missing dependency 'torchvision'. Some models or pipeline code require it.\\n\"",
-        "detail": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
+        "peekOfCode": "class FirstAgent:\n    \"\"\"Reusable local LLM wrapper for CLI, API, Streamlit, or specialist agents.\"\"\"\n    def __init__(\n        self,\n        model_id: str = DEFAULT_MODEL_ID,\n        max_new_tokens: int = DEFAULT_MAX_NEW_TOKENS,\n        system_prompt: str = DEFAULT_SYSTEM_PROMPT,\n        pipe: Any | None = None,\n        warn: WarningHandler | None = None,\n    ) -> None:",
+        "detail": "src.investment_agents.core.chat",
         "documentation": {}
     },
     {
         "label": "ensure_runtime_dependencies",
         "kind": 2,
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
         "peekOfCode": "def ensure_runtime_dependencies() -> None:\n    \"\"\"Fail early with a clear message when local model dependencies are missing.\"\"\"\n    try:\n        import torchvision  # noqa: F401\n    except ImportError as exc:\n        raise RuntimeError(\n            \"Missing dependency 'torchvision'. Some models or pipeline code require it.\\n\"\n            \"If you're on a CPU-only machine, run:\\n\"\n            \"  pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu\\n\"\n            \"Or use the command from https://pytorch.org/get-started/locally/ \"",
-        "detail": "first_agent",
+        "detail": "src.investment_agents.core.chat",
         "documentation": {}
     },
     {
         "label": "load_huggingface_token",
         "kind": 2,
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
         "peekOfCode": "def load_huggingface_token(\n    hf_token: str | None = None,\n    warn: WarningHandler | None = None,\n) -> str | None:\n    \"\"\"Load and optionally register a Hugging Face token.\"\"\"\n    load_dotenv()\n    token = hf_token or os.getenv(\"HF_TOKEN\")\n    if not token:\n        return None\n    try:",
-        "detail": "first_agent",
+        "detail": "src.investment_agents.core.chat",
         "documentation": {}
     },
     {
         "label": "create_text_generation_pipeline",
         "kind": 2,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "def create_text_generation_pipeline(\n    model_id: str = DEFAULT_MODEL_ID,\n    hf_token: str | None = None,\n    warn: WarningHandler | None = None,\n):\n    \"\"\"Create the local text-generation pipeline used by every frontend.\"\"\"\n    ensure_runtime_dependencies()\n    load_huggingface_token(hf_token=hf_token, warn=warn)\n    return pipeline(task=\"text-generation\", model=model_id, dtype=\"auto\")\ndef parse_pipeline_response(",
-        "detail": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
+        "peekOfCode": "def create_text_generation_pipeline(\n    model_id: str = DEFAULT_MODEL_ID,\n    hf_token: str | None = None,\n    warn: WarningHandler | None = None,\n):\n    \"\"\"Create the local text-generation pipeline used by frontends and agents.\"\"\"\n    ensure_runtime_dependencies()\n    load_huggingface_token(hf_token=hf_token, warn=warn)\n    return pipeline(task=\"text-generation\", model=model_id, dtype=\"auto\")\ndef parse_pipeline_response(",
+        "detail": "src.investment_agents.core.chat",
         "documentation": {}
     },
     {
         "label": "parse_pipeline_response",
         "kind": 2,
-        "importPath": "first_agent",
-        "description": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
         "peekOfCode": "def parse_pipeline_response(\n    response: Any,\n    chat: list[ChatMessage],\n) -> tuple[list[ChatMessage], str]:\n    \"\"\"Normalize common transformers pipeline response shapes into chat + reply.\"\"\"\n    first = response[0] if isinstance(response, list) and response else response\n    if isinstance(first, dict):\n        generated = (\n            first.get(\"generated_text\")\n            or first.get(\"text\")",
-        "detail": "first_agent",
+        "detail": "src.investment_agents.core.chat",
         "documentation": {}
     },
     {
         "label": "run_cli",
         "kind": 2,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "def run_cli() -> None:\n    \"\"\"Run the original terminal chat experience using the reusable agent.\"\"\"\n    def warn(message: str) -> None:\n        print(f\"Warning: {message}\")\n    print(f\"Loading {DEFAULT_MODEL_ID} (first run downloads the model, ~1-2 min)...\")\n    try:\n        agent = FirstAgent(warn=warn)\n        chat = agent.new_chat()\n        _ = agent.pipe\n    except RuntimeError as exc:",
-        "detail": "first_agent",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_MODEL_ID",
-        "kind": 5,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "DEFAULT_MODEL_ID = \"HuggingFaceTB/SmolLM2-360M-Instruct\"\nDEFAULT_SYSTEM_PROMPT = \"You are a helpful, concise assistant.\"\nDEFAULT_MAX_NEW_TOKENS = 300\nChatMessage = dict[str, str]\nWarningHandler = Callable[[str], None]\n@dataclass\nclass AgentResponse:\n    \"\"\"Structured result returned by the reusable agent service layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str",
-        "detail": "first_agent",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_SYSTEM_PROMPT",
-        "kind": 5,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "DEFAULT_SYSTEM_PROMPT = \"You are a helpful, concise assistant.\"\nDEFAULT_MAX_NEW_TOKENS = 300\nChatMessage = dict[str, str]\nWarningHandler = Callable[[str], None]\n@dataclass\nclass AgentResponse:\n    \"\"\"Structured result returned by the reusable agent service layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str\n    elapsed_seconds: float",
-        "detail": "first_agent",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_MAX_NEW_TOKENS",
-        "kind": 5,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "DEFAULT_MAX_NEW_TOKENS = 300\nChatMessage = dict[str, str]\nWarningHandler = Callable[[str], None]\n@dataclass\nclass AgentResponse:\n    \"\"\"Structured result returned by the reusable agent service layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str\n    elapsed_seconds: float\n    raw_response: Any = field(repr=False, default=None)",
-        "detail": "first_agent",
-        "documentation": {}
-    },
-    {
-        "label": "ChatMessage",
-        "kind": 5,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "ChatMessage = dict[str, str]\nWarningHandler = Callable[[str], None]\n@dataclass\nclass AgentResponse:\n    \"\"\"Structured result returned by the reusable agent service layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str\n    elapsed_seconds: float\n    raw_response: Any = field(repr=False, default=None)\ndef initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:",
-        "detail": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
+        "peekOfCode": "def run_cli() -> None:\n    \"\"\"Run a terminal chat loop using the reusable agent.\"\"\"\n    def warn(message: str) -> None:\n        print(f\"Warning: {message}\")\n    print(f\"Loading {DEFAULT_MODEL_ID} (first run downloads the model, ~1-2 min)...\")\n    try:\n        agent = FirstAgent(warn=warn)\n        chat = agent.new_chat()\n        _ = agent.pipe\n    except RuntimeError as exc:",
+        "detail": "src.investment_agents.core.chat",
         "documentation": {}
     },
     {
         "label": "WarningHandler",
         "kind": 5,
-        "importPath": "first_agent",
-        "description": "first_agent",
-        "peekOfCode": "WarningHandler = Callable[[str], None]\n@dataclass\nclass AgentResponse:\n    \"\"\"Structured result returned by the reusable agent service layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str\n    elapsed_seconds: float\n    raw_response: Any = field(repr=False, default=None)\ndef initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by transformers.\"\"\"",
-        "detail": "first_agent",
+        "importPath": "src.investment_agents.core.chat",
+        "description": "src.investment_agents.core.chat",
+        "peekOfCode": "WarningHandler = Callable[[str], None]\n@dataclass\nclass AgentResponse:\n    \"\"\"Structured result returned by the reusable chat model layer.\"\"\"\n    chat: list[ChatMessage]\n    reply: str\n    elapsed_seconds: float\n    raw_response: Any = field(repr=False, default=None)\ndef ensure_runtime_dependencies() -> None:\n    \"\"\"Fail early with a clear message when local model dependencies are missing.\"\"\"",
+        "detail": "src.investment_agents.core.chat",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "src.investment_agents.core.config",
+        "description": "src.investment_agents.core.config",
+        "peekOfCode": "class Settings:\n    app_name: str = field(\n        default_factory=lambda: os.getenv(\"APP_NAME\", \"Investment Agentic Analytics\")\n    )\n    environment: str = field(default_factory=lambda: os.getenv(\"APP_ENV\", \"development\"))\n    model_id: str = field(\n        default_factory=lambda: os.getenv(\"HF_MODEL_ID\", \"HuggingFaceTB/SmolLM2-360M-Instruct\")\n    )\n    llm_provider: str = field(default_factory=lambda: _upper_env(\"LLM_PROVIDER\", \"template\").lower())\n    openai_api_key: str | None = field(default_factory=lambda: _optional_env(\"OPENAI_API_KEY\"))",
+        "detail": "src.investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "load_environment",
+        "kind": 2,
+        "importPath": "src.investment_agents.core.config",
+        "description": "src.investment_agents.core.config",
+        "peekOfCode": "def load_environment() -> None:\n    cwd_dotenv = Path.cwd() / \".env\"\n    if cwd_dotenv.exists():\n        load_dotenv(dotenv_path=cwd_dotenv)\n    discovered_dotenv = find_dotenv(usecwd=True)\n    if discovered_dotenv:\n        load_dotenv(dotenv_path=discovered_dotenv)\ndef get_settings() -> Settings:\n    load_environment()\n    return Settings()",
+        "detail": "src.investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "kind": 2,
+        "importPath": "src.investment_agents.core.config",
+        "description": "src.investment_agents.core.config",
+        "peekOfCode": "def get_settings() -> Settings:\n    load_environment()\n    return Settings()",
+        "detail": "src.investment_agents.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "initial_chat",
+        "kind": 2,
+        "importPath": "src.investment_agents.core.messages",
+        "description": "src.investment_agents.core.messages",
+        "peekOfCode": "def initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by chat clients.\"\"\"\n    return [{\"role\": \"system\", \"content\": system_prompt}]",
+        "detail": "src.investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MODEL_ID",
+        "kind": 5,
+        "importPath": "src.investment_agents.core.messages",
+        "description": "src.investment_agents.core.messages",
+        "peekOfCode": "DEFAULT_MODEL_ID = \"HuggingFaceTB/SmolLM2-360M-Instruct\"\nDEFAULT_SYSTEM_PROMPT = \"\"\"You are an expert market analysts who continously monitors daily market trends, and sentiments and cross checks them with 52-week highs, moving averages and other market related triggers and political and economic trends and shifts that will impact market volatility. Clearly state when the sources do not contain enough evidence.\"\"\"\nDEFAULT_MAX_NEW_TOKENS = 300\nChatMessage = dict[str, str]\ndef initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by chat clients.\"\"\"\n    return [{\"role\": \"system\", \"content\": system_prompt}]",
+        "detail": "src.investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_SYSTEM_PROMPT",
+        "kind": 5,
+        "importPath": "src.investment_agents.core.messages",
+        "description": "src.investment_agents.core.messages",
+        "peekOfCode": "DEFAULT_SYSTEM_PROMPT = \"\"\"You are an expert market analysts who continously monitors daily market trends, and sentiments and cross checks them with 52-week highs, moving averages and other market related triggers and political and economic trends and shifts that will impact market volatility. Clearly state when the sources do not contain enough evidence.\"\"\"\nDEFAULT_MAX_NEW_TOKENS = 300\nChatMessage = dict[str, str]\ndef initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by chat clients.\"\"\"\n    return [{\"role\": \"system\", \"content\": system_prompt}]",
+        "detail": "src.investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MAX_NEW_TOKENS",
+        "kind": 5,
+        "importPath": "src.investment_agents.core.messages",
+        "description": "src.investment_agents.core.messages",
+        "peekOfCode": "DEFAULT_MAX_NEW_TOKENS = 300\nChatMessage = dict[str, str]\ndef initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by chat clients.\"\"\"\n    return [{\"role\": \"system\", \"content\": system_prompt}]",
+        "detail": "src.investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "kind": 5,
+        "importPath": "src.investment_agents.core.messages",
+        "description": "src.investment_agents.core.messages",
+        "peekOfCode": "ChatMessage = dict[str, str]\ndef initial_chat(system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> list[ChatMessage]:\n    \"\"\"Create a fresh chat history in the format expected by chat clients.\"\"\"\n    return [{\"role\": \"system\", \"content\": system_prompt}]",
+        "detail": "src.investment_agents.core.messages",
+        "documentation": {}
+    },
+    {
+        "label": "TraceEvent",
+        "kind": 6,
+        "importPath": "src.investment_agents.core.observability",
+        "description": "src.investment_agents.core.observability",
+        "peekOfCode": "class TraceEvent:\n    event_type: str\n    agent_name: str\n    message: str\n    trace_id: str\n    metadata: dict[str, Any] = field(default_factory=dict)\n    timestamp: str = field(default_factory=utc_now_iso)\nclass EventRecorder:\n    \"\"\"Recorder for agent routing/tool events, with optional JSONL persistence.\"\"\"\n    def __init__(",
+        "detail": "src.investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "EventRecorder",
+        "kind": 6,
+        "importPath": "src.investment_agents.core.observability",
+        "description": "src.investment_agents.core.observability",
+        "peekOfCode": "class EventRecorder:\n    \"\"\"Recorder for agent routing/tool events, with optional JSONL persistence.\"\"\"\n    def __init__(\n        self,\n        max_events: int = 500,\n        enabled: bool = True,\n        log_path: str | Path | None = None,\n    ) -> None:\n        self.max_events = max_events\n        self.enabled = enabled",
+        "detail": "src.investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "utc_now_iso",
+        "kind": 2,
+        "importPath": "src.investment_agents.core.observability",
+        "description": "src.investment_agents.core.observability",
+        "peekOfCode": "def utc_now_iso() -> str:\n    return datetime.now(timezone.utc).isoformat()\n@dataclass\nclass TraceEvent:\n    event_type: str\n    agent_name: str\n    message: str\n    trace_id: str\n    metadata: dict[str, Any] = field(default_factory=dict)\n    timestamp: str = field(default_factory=utc_now_iso)",
+        "detail": "src.investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "event_recorder",
+        "kind": 5,
+        "importPath": "src.investment_agents.core.observability",
+        "description": "src.investment_agents.core.observability",
+        "peekOfCode": "event_recorder = EventRecorder()",
+        "detail": "src.investment_agents.core.observability",
+        "documentation": {}
+    },
+    {
+        "label": "LedgerTransaction",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "class LedgerTransaction:\n    date: str | None\n    symbol: str\n    side: str\n    quantity: Decimal\n    price: Decimal\n    fees: Decimal = Decimal(\"0\")\n    amount: Decimal | None = None\n    currency: str = DEFAULT_CURRENCY\n    raw: dict[str, Any] = field(default_factory=dict)",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "LedgerPosition",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "class LedgerPosition:\n    symbol: str\n    currency: str\n    quantity: Decimal\n    net_cash_flow: Decimal\n    transaction_count: int\n    def to_dict(self) -> dict[str, Any]:\n        return {\n            \"symbol\": self.symbol,\n            \"currency\": self.currency,",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "LedgerSummary",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "class LedgerSummary:\n    transaction_count: int\n    symbols: list[str]\n    currencies: list[str]\n    total_fees: Decimal\n    total_fees_by_currency: dict[str, Decimal]\n    net_cash_flow_by_currency: dict[str, Decimal]\n    positions: list[LedgerPosition]\n    reporting_currency: str | None = None\n    total_fees_reporting_currency: Decimal | None = None",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "parse_ledger_rows",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "def parse_ledger_rows(rows: list[list[Any]]) -> tuple[list[LedgerTransaction], list[str]]:\n    if not rows:\n        return [], [\"Ledger sheet returned no rows.\"]\n    header = [_normalize_header(value) for value in rows[0]]\n    column_map = _build_column_map(header)\n    warnings: list[str] = []\n    required = [\"symbol\", \"side\", \"quantity\"]\n    missing = [name for name in required if name not in column_map]\n    if missing:\n        return [], [f\"Ledger sheet is missing required columns: {', '.join(missing)}.\"]",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "summarize_transactions",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "def summarize_transactions(\n    transactions: list[LedgerTransaction],\n    warnings: list[str] | None = None,\n    reporting_currency: str | None = None,\n    fx_rates: Mapping[str, str | Decimal] | None = None,\n) -> LedgerSummary:\n    positions_by_symbol_currency: dict[tuple[str, str], dict[str, Any]] = {}\n    for transaction in transactions:\n        bucket = positions_by_symbol_currency.setdefault(\n            (transaction.symbol, transaction.currency),",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "HEADER_ALIASES",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "HEADER_ALIASES = {\n    \"date\": {\"date\", \"trade date\", \"transaction date\", \"timestamp\"},\n    \"symbol\": {\"symbol\", \"ticker\", \"asset\", \"instrument\"},\n    \"side\": {\"side\", \"action\", \"type\", \"transaction type\"},\n    \"quantity\": {\"quantity\", \"qty\", \"shares\", \"units\"},\n    \"price\": {\"price\", \"unit price\", \"avg price\", \"average price\"},\n    \"fees\": {\"fees\", \"fee\", \"commission\", \"costs\"},\n    \"amount\": {\"amount\", \"total\", \"value\", \"net amount\", \"cash flow\"},\n    \"currency\": {\"currency\", \"ccy\"},\n}",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "BUY_SIDES",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "BUY_SIDES = {\"buy\", \"bought\", \"purchase\", \"deposit\"}\nSELL_SIDES = {\"sell\", \"sold\", \"sale\", \"withdrawal\"}\n@dataclass(frozen=True)\nclass LedgerTransaction:\n    date: str | None\n    symbol: str\n    side: str\n    quantity: Decimal\n    price: Decimal\n    fees: Decimal = Decimal(\"0\")",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "SELL_SIDES",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.ledger",
+        "description": "src.investment_agents.domain.ledger",
+        "peekOfCode": "SELL_SIDES = {\"sell\", \"sold\", \"sale\", \"withdrawal\"}\n@dataclass(frozen=True)\nclass LedgerTransaction:\n    date: str | None\n    symbol: str\n    side: str\n    quantity: Decimal\n    price: Decimal\n    fees: Decimal = Decimal(\"0\")\n    amount: Decimal | None = None",
+        "detail": "src.investment_agents.domain.ledger",
+        "documentation": {}
+    },
+    {
+        "label": "RouteDecision",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.models",
+        "description": "src.investment_agents.domain.models",
+        "peekOfCode": "class RouteDecision:\n    \"\"\"Explains how the orchestrator interpreted and routed a user request.\"\"\"\n    selected_agents: list[str]\n    focus_areas: list[AnalysisFocus]\n    symbols: list[str] = field(default_factory=list)\n    reasons: list[str] = field(default_factory=list)\n    def to_dict(self) -> dict:\n        return asdict(self)",
+        "detail": "src.investment_agents.domain.models",
+        "documentation": {}
+    },
+    {
+        "label": "AnalysisFocus",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.models",
+        "description": "src.investment_agents.domain.models",
+        "peekOfCode": "AnalysisFocus = Literal[\"ledger\", \"market\", \"research\"]\n@dataclass(frozen=True)\nclass RouteDecision:\n    \"\"\"Explains how the orchestrator interpreted and routed a user request.\"\"\"\n    selected_agents: list[str]\n    focus_areas: list[AnalysisFocus]\n    symbols: list[str] = field(default_factory=list)\n    reasons: list[str] = field(default_factory=list)\n    def to_dict(self) -> dict:\n        return asdict(self)",
+        "detail": "src.investment_agents.domain.models",
+        "documentation": {}
+    },
+    {
+        "label": "Money",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.money",
+        "description": "src.investment_agents.domain.money",
+        "peekOfCode": "class Money:\n    amount: Decimal\n    currency: str = DEFAULT_CURRENCY\n    def to_dict(self) -> dict[str, str]:\n        return {\"amount\": str(self.amount), \"currency\": self.currency}\ndef normalize_currency(value: str | None) -> str:\n    if not value:\n        return DEFAULT_CURRENCY\n    return value.strip().upper()\ndef decimal_or_zero(value: str) -> Decimal:",
+        "detail": "src.investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_currency",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.money",
+        "description": "src.investment_agents.domain.money",
+        "peekOfCode": "def normalize_currency(value: str | None) -> str:\n    if not value:\n        return DEFAULT_CURRENCY\n    return value.strip().upper()\ndef decimal_or_zero(value: str) -> Decimal:\n    parsed = optional_decimal(value)\n    return parsed if parsed is not None else Decimal(\"0\")\ndef optional_decimal(value: str) -> Decimal | None:\n    if not value:\n        return None",
+        "detail": "src.investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "decimal_or_zero",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.money",
+        "description": "src.investment_agents.domain.money",
+        "peekOfCode": "def decimal_or_zero(value: str) -> Decimal:\n    parsed = optional_decimal(value)\n    return parsed if parsed is not None else Decimal(\"0\")\ndef optional_decimal(value: str) -> Decimal | None:\n    if not value:\n        return None\n    cleaned = value.replace(\",\", \"\").replace(\"$\", \"\").replace(\"R\", \"\").strip()\n    if cleaned.startswith(\"(\") and cleaned.endswith(\")\"):\n        cleaned = f\"-{cleaned[1:-1]}\"\n    try:",
+        "detail": "src.investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "optional_decimal",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.money",
+        "description": "src.investment_agents.domain.money",
+        "peekOfCode": "def optional_decimal(value: str) -> Decimal | None:\n    if not value:\n        return None\n    cleaned = value.replace(\",\", \"\").replace(\"$\", \"\").replace(\"R\", \"\").strip()\n    if cleaned.startswith(\"(\") and cleaned.endswith(\")\"):\n        cleaned = f\"-{cleaned[1:-1]}\"\n    try:\n        return Decimal(cleaned)\n    except InvalidOperation:\n        return None",
+        "detail": "src.investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_CURRENCY",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.money",
+        "description": "src.investment_agents.domain.money",
+        "peekOfCode": "DEFAULT_CURRENCY = \"UNKNOWN\"\n@dataclass(frozen=True)\nclass Money:\n    amount: Decimal\n    currency: str = DEFAULT_CURRENCY\n    def to_dict(self) -> dict[str, str]:\n        return {\"amount\": str(self.amount), \"currency\": self.currency}\ndef normalize_currency(value: str | None) -> str:\n    if not value:\n        return DEFAULT_CURRENCY",
+        "detail": "src.investment_agents.domain.money",
+        "documentation": {}
+    },
+    {
+        "label": "PortfolioHolding",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "class PortfolioHolding:\n    symbol: str\n    quantity: Decimal\n    currency: str = DEFAULT_CURRENCY\n    name: str | None = None\n    current_price: Decimal | None = None\n    purchase_value: Decimal | None = None\n    current_value: Decimal | None = None\n    unrealized_pl: Decimal | None = None\n    profit_status: str | None = None",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "PortfolioAllocation",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "class PortfolioAllocation:\n    symbol: str\n    currency: str\n    current_value: Decimal\n    weight: Decimal\n    reporting_value: Decimal | None = None\n    def to_dict(self) -> dict[str, Any]:\n        return {\n            \"symbol\": self.symbol,\n            \"currency\": self.currency,",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "PortfolioAlert",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "class PortfolioAlert:\n    alert_type: str\n    severity: str\n    symbol: str\n    currency: str\n    message: str\n    value: Decimal\n    threshold: Decimal\n    def to_dict(self) -> dict[str, str]:\n        return {",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "PortfolioSummary",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "class PortfolioSummary:\n    holding_count: int\n    symbols: list[str]\n    currencies: list[str]\n    total_current_value_by_currency: dict[str, Decimal]\n    total_purchase_value_by_currency: dict[str, Decimal]\n    total_unrealized_pl_by_currency: dict[str, Decimal]\n    allocations_by_currency: list[PortfolioAllocation]\n    concentration_warnings: list[str] = field(default_factory=list)\n    alerts: list[PortfolioAlert] = field(default_factory=list)",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "parse_holding_rows",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "def parse_holding_rows(rows: list[list[Any]]) -> tuple[list[PortfolioHolding], list[str]]:\n    if not rows:\n        return [], [\"Holdings sheet returned no rows.\"]\n    header = [_normalize_header(value) for value in rows[0]]\n    column_map = _build_column_map(header)\n    warnings: list[str] = []\n    required = [\"symbol\", \"quantity\"]\n    missing = [name for name in required if name not in column_map]\n    if missing:\n        return [], [f\"Holdings sheet is missing required columns: {', '.join(missing)}.\"]",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "summarize_holdings",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "def summarize_holdings(\n    holdings: list[PortfolioHolding],\n    warnings: list[str] | None = None,\n    reporting_currency: str | None = None,\n    fx_rates: Mapping[str, str | Decimal] | None = None,\n    concentration_alert_threshold: Decimal = CONCENTRATION_WARNING_THRESHOLD,\n    loss_alert_threshold: Decimal = LOSS_ALERT_THRESHOLD,\n) -> PortfolioSummary:\n    holdings_with_value = [\n        holding for holding in holdings if holding.current_value is not None",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "HEADER_ALIASES",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "HEADER_ALIASES = {\n    \"symbol\": {\"symbol\", \"ticker\", \"asset\", \"instrument\"},\n    \"name\": {\"name\", \"company\", \"security\", \"holding\"},\n    \"quantity\": {\"quantity\", \"qty\", \"shares\", \"shares held\", \"units\"},\n    \"current_price\": {\"current price\", \"market price\", \"last price\", \"price\"},\n    \"purchase_value\": {\"purchase value\", \"cost basis\", \"book cost\", \"cost\", \"invested value\"},\n    \"current_value\": {\"current value\", \"market value\", \"holding value\", \"value\"},\n    \"unrealized_pl\": {\"p/l\", \"pl\", \"$ p/l\", \"profit/loss\", \"gain/loss\", \"unrealized p/l\"},\n    \"profit_status\": {\"profit status\", \"status\"},\n    \"currency\": {\"currency\", \"ccy\"},",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "CONCENTRATION_WARNING_THRESHOLD",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "CONCENTRATION_WARNING_THRESHOLD = Decimal(\"0.40\")\nLOSS_ALERT_THRESHOLD = Decimal(\"0.10\")\n@dataclass(frozen=True)\nclass PortfolioHolding:\n    symbol: str\n    quantity: Decimal\n    currency: str = DEFAULT_CURRENCY\n    name: str | None = None\n    current_price: Decimal | None = None\n    purchase_value: Decimal | None = None",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "LOSS_ALERT_THRESHOLD",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.portfolio",
+        "description": "src.investment_agents.domain.portfolio",
+        "peekOfCode": "LOSS_ALERT_THRESHOLD = Decimal(\"0.10\")\n@dataclass(frozen=True)\nclass PortfolioHolding:\n    symbol: str\n    quantity: Decimal\n    currency: str = DEFAULT_CURRENCY\n    name: str | None = None\n    current_price: Decimal | None = None\n    purchase_value: Decimal | None = None\n    current_value: Decimal | None = None",
+        "detail": "src.investment_agents.domain.portfolio",
+        "documentation": {}
+    },
+    {
+        "label": "extract_ticker_symbols",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.tickers",
+        "description": "src.investment_agents.domain.tickers",
+        "peekOfCode": "def extract_ticker_symbols(text: str) -> list[str]:\n    \"\"\"Extract uppercase ticker-like symbols without turning normal words into tickers.\"\"\"\n    symbols: list[str] = []\n    for match in SYMBOL_RE.findall(text):\n        if match in IGNORED_SYMBOLS:\n            continue\n        if match not in symbols:\n            symbols.append(match)\n    return symbols",
+        "detail": "src.investment_agents.domain.tickers",
+        "documentation": {}
+    },
+    {
+        "label": "SYMBOL_RE",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.tickers",
+        "description": "src.investment_agents.domain.tickers",
+        "peekOfCode": "SYMBOL_RE = re.compile(r\"\\b[A-Z]{1,5}\\b\")\nIGNORED_SYMBOLS = {\"A\", \"I\", \"THE\", \"AND\", \"FOR\", \"P\", \"L\"}\ndef extract_ticker_symbols(text: str) -> list[str]:\n    \"\"\"Extract uppercase ticker-like symbols without turning normal words into tickers.\"\"\"\n    symbols: list[str] = []\n    for match in SYMBOL_RE.findall(text):\n        if match in IGNORED_SYMBOLS:\n            continue\n        if match not in symbols:\n            symbols.append(match)",
+        "detail": "src.investment_agents.domain.tickers",
+        "documentation": {}
+    },
+    {
+        "label": "IGNORED_SYMBOLS",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.tickers",
+        "description": "src.investment_agents.domain.tickers",
+        "peekOfCode": "IGNORED_SYMBOLS = {\"A\", \"I\", \"THE\", \"AND\", \"FOR\", \"P\", \"L\"}\ndef extract_ticker_symbols(text: str) -> list[str]:\n    \"\"\"Extract uppercase ticker-like symbols without turning normal words into tickers.\"\"\"\n    symbols: list[str] = []\n    for match in SYMBOL_RE.findall(text):\n        if match in IGNORED_SYMBOLS:\n            continue\n        if match not in symbols:\n            symbols.append(match)\n    return symbols",
+        "detail": "src.investment_agents.domain.tickers",
+        "documentation": {}
+    },
+    {
+        "label": "WatchlistItem",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.watchlist",
+        "description": "src.investment_agents.domain.watchlist",
+        "peekOfCode": "class WatchlistItem:\n    symbol: str\n    currency: str = DEFAULT_CURRENCY\n    name: str | None = None\n    market: str | None = None\n    target_price: Decimal | None = None\n    current_price: Decimal | None = None\n    status: str | None = None\n    reason: str | None = None\n    raw: dict[str, Any] = field(default_factory=dict)",
+        "detail": "src.investment_agents.domain.watchlist",
+        "documentation": {}
+    },
+    {
+        "label": "WatchlistSummary",
+        "kind": 6,
+        "importPath": "src.investment_agents.domain.watchlist",
+        "description": "src.investment_agents.domain.watchlist",
+        "peekOfCode": "class WatchlistSummary:\n    item_count: int\n    symbols: list[str]\n    currencies: list[str]\n    markets: list[str]\n    by_status: dict[str, int]\n    items: list[WatchlistItem]\n    warnings: list[str] = field(default_factory=list)\n    def to_dict(self) -> dict[str, Any]:\n        return {",
+        "detail": "src.investment_agents.domain.watchlist",
+        "documentation": {}
+    },
+    {
+        "label": "parse_watchlist_rows",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.watchlist",
+        "description": "src.investment_agents.domain.watchlist",
+        "peekOfCode": "def parse_watchlist_rows(rows: list[list[Any]]) -> tuple[list[WatchlistItem], list[str]]:\n    if not rows:\n        return [], [\"Watchlist sheet returned no rows.\"]\n    header = [_normalize_header(value) for value in rows[0]]\n    column_map = _build_column_map(header)\n    if \"symbol\" not in column_map:\n        return [], [\"Watchlist sheet is missing required column: symbol.\"]\n    items: list[WatchlistItem] = []\n    warnings: list[str] = []\n    for index, row in enumerate(rows[1:], start=2):",
+        "detail": "src.investment_agents.domain.watchlist",
+        "documentation": {}
+    },
+    {
+        "label": "summarize_watchlist",
+        "kind": 2,
+        "importPath": "src.investment_agents.domain.watchlist",
+        "description": "src.investment_agents.domain.watchlist",
+        "peekOfCode": "def summarize_watchlist(\n    items: list[WatchlistItem],\n    warnings: list[str] | None = None,\n) -> WatchlistSummary:\n    return WatchlistSummary(\n        item_count=len(items),\n        symbols=sorted({item.symbol for item in items}),\n        currencies=sorted({item.currency for item in items}),\n        markets=sorted({item.market for item in items if item.market}),\n        by_status=_count_by_status(items),",
+        "detail": "src.investment_agents.domain.watchlist",
+        "documentation": {}
+    },
+    {
+        "label": "HEADER_ALIASES",
+        "kind": 5,
+        "importPath": "src.investment_agents.domain.watchlist",
+        "description": "src.investment_agents.domain.watchlist",
+        "peekOfCode": "HEADER_ALIASES = {\n    \"symbol\": {\"symbol\", \"ticker\", \"asset\", \"instrument\"},\n    \"name\": {\"name\", \"company\", \"security\", \"holding\"},\n    \"currency\": {\"currency\", \"ccy\"},\n    \"market\": {\"market\", \"exchange\", \"venue\"},\n    \"target_price\": {\"target price\", \"target\", \"watch price\", \"buy below\"},\n    \"current_price\": {\"current price\", \"market price\", \"last price\", \"price\"},\n    \"status\": {\"status\", \"watch status\", \"state\"},\n    \"reason\": {\"reason\", \"notes\", \"thesis\", \"why\", \"comment\"},\n}",
+        "detail": "src.investment_agents.domain.watchlist",
+        "documentation": {}
+    },
+    {
+        "label": "RawPayloadRecord",
+        "kind": 6,
+        "importPath": "src.investment_agents.storage.market_cache",
+        "description": "src.investment_agents.storage.market_cache",
+        "peekOfCode": "class RawPayloadRecord:\n    source: str\n    endpoint: str\n    cache_key: str\n    payload: dict[str, Any]\n    fetched_at: str\n@dataclass(frozen=True)\nclass FxRateRecord:\n    base_currency: str\n    quote_currency: str",
+        "detail": "src.investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "FxRateRecord",
+        "kind": 6,
+        "importPath": "src.investment_agents.storage.market_cache",
+        "description": "src.investment_agents.storage.market_cache",
+        "peekOfCode": "class FxRateRecord:\n    base_currency: str\n    quote_currency: str\n    rate: Decimal\n    observed_at: str\n    source: str\n    def to_dict(self) -> dict[str, str]:\n        return {\n            \"base_currency\": self.base_currency,\n            \"quote_currency\": self.quote_currency,",
+        "detail": "src.investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "MarketDataCache",
+        "kind": 6,
+        "importPath": "src.investment_agents.storage.market_cache",
+        "description": "src.investment_agents.storage.market_cache",
+        "peekOfCode": "class MarketDataCache:\n    \"\"\"DuckDB-backed cache for raw API payloads, curated snapshots, and FX rates.\"\"\"\n    def __init__(self, db_path: str | Path) -> None:\n        self.db_path = Path(db_path)\n        self._connection = None\n    def get_fresh_raw_payload(\n        self,\n        source: str,\n        endpoint: str,\n        cache_key: str,",
+        "detail": "src.investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "utc_now_iso",
+        "kind": 2,
+        "importPath": "src.investment_agents.storage.market_cache",
+        "description": "src.investment_agents.storage.market_cache",
+        "peekOfCode": "def utc_now_iso() -> str:\n    return datetime.now(timezone.utc).isoformat()\n@dataclass(frozen=True)\nclass RawPayloadRecord:\n    source: str\n    endpoint: str\n    cache_key: str\n    payload: dict[str, Any]\n    fetched_at: str\n@dataclass(frozen=True)",
+        "detail": "src.investment_agents.storage.market_cache",
+        "documentation": {}
+    },
+    {
+        "label": "AlphaVantageResearchTool",
+        "kind": 6,
+        "importPath": "src.investment_agents.tools.alphavantage",
+        "description": "src.investment_agents.tools.alphavantage",
+        "peekOfCode": "class AlphaVantageResearchTool:\n    \"\"\"Alpha Vantage adapter for financial news, sentiment, and macro research.\"\"\"\n    name = \"alphavantage_research\"\n    base_url = \"https://www.alphavantage.co/query\"\n    def __init__(self, settings: Settings, cache: MarketDataCache | None = None) -> None:\n        self.settings = settings\n        self.cache = cache\n    def readiness(self) -> ToolReadiness:\n        missing = [] if self.settings.alphavantage_api_key else [\"ALPHAVANTAGE_API_KEY\"]\n        return ToolReadiness(",
+        "detail": "src.investment_agents.tools.alphavantage",
+        "documentation": {}
+    },
+    {
+        "label": "ToolResult",
+        "kind": 6,
+        "importPath": "src.investment_agents.tools.base",
+        "description": "src.investment_agents.tools.base",
+        "peekOfCode": "class ToolResult:\n    tool_name: str\n    summary: str\n    data: dict[str, Any] = field(default_factory=dict)\n    status: str = \"ok\"\n@dataclass(frozen=True)\nclass ToolReadiness:\n    tool_name: str\n    configured: bool\n    status: str",
+        "detail": "src.investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolReadiness",
+        "kind": 6,
+        "importPath": "src.investment_agents.tools.base",
+        "description": "src.investment_agents.tools.base",
+        "peekOfCode": "class ToolReadiness:\n    tool_name: str\n    configured: bool\n    status: str\n    missing_settings: list[str] = field(default_factory=list)\n    capabilities: list[str] = field(default_factory=list)\nclass ToolError(RuntimeError):\n    \"\"\"Raised when a tool cannot complete its requested data fetch.\"\"\"",
+        "detail": "src.investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "ToolError",
+        "kind": 6,
+        "importPath": "src.investment_agents.tools.base",
+        "description": "src.investment_agents.tools.base",
+        "peekOfCode": "class ToolError(RuntimeError):\n    \"\"\"Raised when a tool cannot complete its requested data fetch.\"\"\"",
+        "detail": "src.investment_agents.tools.base",
+        "documentation": {}
+    },
+    {
+        "label": "FinnhubInvestmentTool",
+        "kind": 6,
+        "importPath": "src.investment_agents.tools.finnhub",
+        "description": "src.investment_agents.tools.finnhub",
+        "peekOfCode": "class FinnhubInvestmentTool:\n    \"\"\"Finnhub market-data adapter for quote and investment analyst workflows.\"\"\"\n    name = \"finnhub_investment_data\"\n    base_url = \"https://finnhub.io/api/v1\"\n    def __init__(self, settings: Settings, cache: MarketDataCache | None = None) -> None:\n        self.settings = settings\n        self.cache = cache\n    def readiness(self) -> ToolReadiness:\n        missing = [] if self.settings.finnhub_api_key else [\"FINNHUB_API_KEY\"]\n        return ToolReadiness(",
+        "detail": "src.investment_agents.tools.finnhub",
+        "documentation": {}
+    },
+    {
+        "label": "GoogleSheetsLedgerTool",
+        "kind": 6,
+        "importPath": "src.investment_agents.tools.google_sheets_ledger",
+        "description": "src.investment_agents.tools.google_sheets_ledger",
+        "peekOfCode": "class GoogleSheetsLedgerTool:\n    \"\"\"Future Google Sheets ledger adapter for P/L and portfolio interpretation.\"\"\"\n    name = \"google_sheets_ledger\"\n    def __init__(self, settings: Settings, cache: MarketDataCache | None = None) -> None:\n        self.settings = settings\n        self.cache = cache\n    def readiness(self) -> ToolReadiness:\n        missing = []\n        if not self.settings.google_ledger_sheet_id:\n            missing.append(\"GOOGLE_LEDGER_SHEET_ID\")",
+        "detail": "src.investment_agents.tools.google_sheets_ledger",
+        "documentation": {}
+    },
+    {
+        "label": "SHEETS_READONLY_SCOPE",
+        "kind": 5,
+        "importPath": "src.investment_agents.tools.google_sheets_ledger",
+        "description": "src.investment_agents.tools.google_sheets_ledger",
+        "peekOfCode": "SHEETS_READONLY_SCOPE = \"https://www.googleapis.com/auth/spreadsheets.readonly\"\nclass GoogleSheetsLedgerTool:\n    \"\"\"Future Google Sheets ledger adapter for P/L and portfolio interpretation.\"\"\"\n    name = \"google_sheets_ledger\"\n    def __init__(self, settings: Settings, cache: MarketDataCache | None = None) -> None:\n        self.settings = settings\n        self.cache = cache\n    def readiness(self) -> ToolReadiness:\n        missing = []\n        if not self.settings.google_ledger_sheet_id:",
+        "detail": "src.investment_agents.tools.google_sheets_ledger",
+        "documentation": {}
+    },
+    {
+        "label": "provider_request_error",
+        "kind": 2,
+        "importPath": "src.investment_agents.tools.provider_errors",
+        "description": "src.investment_agents.tools.provider_errors",
+        "peekOfCode": "def provider_request_error(\n    tool_name: str,\n    provider_name: str,\n    symbol: str,\n    provider_symbol: str,\n    exc: requests.RequestException,\n) -> dict[str, Any]:\n    status = \"provider_error\"\n    response = getattr(exc, \"response\", None)\n    if response is not None and response.status_code == 429:",
+        "detail": "src.investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "provider_payload_error",
+        "kind": 2,
+        "importPath": "src.investment_agents.tools.provider_errors",
+        "description": "src.investment_agents.tools.provider_errors",
+        "peekOfCode": "def provider_payload_error(\n    tool_name: str,\n    provider_name: str,\n    symbol: str,\n    provider_symbol: str,\n    exc: ValueError,\n) -> dict[str, Any]:\n    return {\n        \"tool_name\": tool_name,\n        \"status\": \"malformed_response\",",
+        "detail": "src.investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "provider_rate_limit",
+        "kind": 2,
+        "importPath": "src.investment_agents.tools.provider_errors",
+        "description": "src.investment_agents.tools.provider_errors",
+        "peekOfCode": "def provider_rate_limit(\n    tool_name: str,\n    provider_name: str,\n    symbol: str,\n    provider_symbol: str,\n    message: str | None = None,\n) -> dict[str, Any]:\n    return {\n        \"tool_name\": tool_name,\n        \"status\": \"rate_limited\",",
+        "detail": "src.investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "rate_limit_message",
+        "kind": 2,
+        "importPath": "src.investment_agents.tools.provider_errors",
+        "description": "src.investment_agents.tools.provider_errors",
+        "peekOfCode": "def rate_limit_message(payload: dict[str, Any]) -> str | None:\n    for key, value in payload.items():\n        if key.lower() not in RATE_LIMIT_KEYS:\n            continue\n        message = str(value)\n        lowered = message.lower()\n        if any(term in lowered for term in RATE_LIMIT_TERMS):\n            return message\n    return None",
+        "detail": "src.investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "RATE_LIMIT_KEYS",
+        "kind": 5,
+        "importPath": "src.investment_agents.tools.provider_errors",
+        "description": "src.investment_agents.tools.provider_errors",
+        "peekOfCode": "RATE_LIMIT_KEYS = {\"note\", \"information\"}\nRATE_LIMIT_TERMS = {\"rate limit\", \"frequency\", \"premium\", \"thank you for using\"}\ndef provider_request_error(\n    tool_name: str,\n    provider_name: str,\n    symbol: str,\n    provider_symbol: str,\n    exc: requests.RequestException,\n) -> dict[str, Any]:\n    status = \"provider_error\"",
+        "detail": "src.investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "RATE_LIMIT_TERMS",
+        "kind": 5,
+        "importPath": "src.investment_agents.tools.provider_errors",
+        "description": "src.investment_agents.tools.provider_errors",
+        "peekOfCode": "RATE_LIMIT_TERMS = {\"rate limit\", \"frequency\", \"premium\", \"thank you for using\"}\ndef provider_request_error(\n    tool_name: str,\n    provider_name: str,\n    symbol: str,\n    provider_symbol: str,\n    exc: requests.RequestException,\n) -> dict[str, Any]:\n    status = \"provider_error\"\n    response = getattr(exc, \"response\", None)",
+        "detail": "src.investment_agents.tools.provider_errors",
+        "documentation": {}
+    },
+    {
+        "label": "ToolRegistry",
+        "kind": 6,
+        "importPath": "src.investment_agents.tools.registry",
+        "description": "src.investment_agents.tools.registry",
+        "peekOfCode": "class ToolRegistry:\n    \"\"\"Central wiring point for external resources used by specialist agents.\"\"\"\n    ledger: GoogleSheetsLedgerTool\n    finnhub: FinnhubInvestmentTool\n    alphavantage: AlphaVantageResearchTool\n    cache: MarketDataCache\n    settings: Settings\n    @classmethod\n    def from_settings(cls, settings: Settings | None = None) -> \"ToolRegistry\":\n        settings = settings or get_settings()",
+        "detail": "src.investment_agents.tools.registry",
+        "documentation": {}
+    },
+    {
+        "label": "portfolio_alert_rows",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.observability",
+        "description": "src.investment_agents.ui.observability",
+        "peekOfCode": "def portfolio_alert_rows(agent_results: list[dict[str, Any]]) -> list[dict[str, str]]:\n    rows: list[dict[str, str]] = []\n    for result in agent_results:\n        metadata = result.get(\"metadata\") or {}\n        portfolio_summary = metadata.get(\"portfolio_summary\") or {}\n        for alert in portfolio_summary.get(\"alerts\") or []:\n            rows.append(\n                {\n                    \"severity\": str(alert.get(\"severity\", \"\")),\n                    \"type\": str(alert.get(\"alert_type\", \"\")).replace(\"_\", \" \"),",
+        "detail": "src.investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "data_source_status_rows",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.observability",
+        "description": "src.investment_agents.ui.observability",
+        "peekOfCode": "def data_source_status_rows(agent_results: list[dict[str, Any]]) -> list[dict[str, str]]:\n    rows: list[dict[str, str]] = []\n    for result in agent_results:\n        agent_name = str(result.get(\"agent_name\", \"\"))\n        tool_calls = result.get(\"tool_calls\") or []\n        if tool_calls:\n            for tool_call in tool_calls:\n                rows.append(_tool_status_row(agent_name, tool_call))\n            continue\n        metadata = result.get(\"metadata\") or {}",
+        "detail": "src.investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "data_source_attention_count",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.observability",
+        "description": "src.investment_agents.ui.observability",
+        "peekOfCode": "def data_source_attention_count(rows: list[dict[str, str]]) -> int:\n    return sum(1 for row in rows if row.get(\"status\", \"\").replace(\" \", \"_\") in ATTENTION_STATUSES)\ndef source_note_rows(source_notes: list[dict[str, Any]]) -> list[dict[str, str]]:\n    return [\n        {\n            \"agent\": str(note.get(\"agent_name\", \"\")),\n            \"tool\": str(note.get(\"tool_name\", \"\")),\n            \"symbol\": _symbol_text(note),\n            \"status\": _status_label(note.get(\"status\", \"\")),\n            \"cache\": str(note.get(\"cache_status\", \"\")),",
+        "detail": "src.investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "source_note_rows",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.observability",
+        "description": "src.investment_agents.ui.observability",
+        "peekOfCode": "def source_note_rows(source_notes: list[dict[str, Any]]) -> list[dict[str, str]]:\n    return [\n        {\n            \"agent\": str(note.get(\"agent_name\", \"\")),\n            \"tool\": str(note.get(\"tool_name\", \"\")),\n            \"symbol\": _symbol_text(note),\n            \"status\": _status_label(note.get(\"status\", \"\")),\n            \"cache\": str(note.get(\"cache_status\", \"\")),\n            \"source_at\": str(note.get(\"fetched_at\", \"\") or note.get(\"stale_fetched_at\", \"\")),\n            \"stale_at\": str(note.get(\"stale_fetched_at\", \"\")),",
+        "detail": "src.investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "event_table_rows",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.observability",
+        "description": "src.investment_agents.ui.observability",
+        "peekOfCode": "def event_table_rows(events: list[dict[str, Any]]) -> list[dict[str, str]]:\n    rows: list[dict[str, str]] = []\n    for event in events:\n        metadata = event.get(\"metadata\") or {}\n        rows.append(\n            {\n                \"time\": str(event.get(\"timestamp\", \"\")),\n                \"event\": str(event.get(\"event_type\", \"\")),\n                \"agent\": str(event.get(\"agent_name\", \"\")),\n                \"message\": str(event.get(\"message\", \"\")),",
+        "detail": "src.investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "trace_metrics",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.observability",
+        "description": "src.investment_agents.ui.observability",
+        "peekOfCode": "def trace_metrics(events: list[dict[str, Any]]) -> dict[str, int]:\n    agents = {\n        str(event.get(\"agent_name\", \"\"))\n        for event in events\n        if event.get(\"agent_name\")\n    }\n    tools = {\n        str((event.get(\"metadata\") or {}).get(\"tool_name\", \"\"))\n        for event in events\n        if (event.get(\"metadata\") or {}).get(\"tool_name\")",
+        "detail": "src.investment_agents.ui.observability",
+        "documentation": {}
+    },
+    {
+        "label": "ATTENTION_STATUSES",
+        "kind": 5,
+        "importPath": "src.investment_agents.ui.observability",
+        "description": "src.investment_agents.ui.observability",
+        "peekOfCode": "ATTENTION_STATUSES = {\n    \"malformed_response\",\n    \"needs_configuration\",\n    \"needs_symbol\",\n    \"provider_error\",\n    \"rate_limited\",\n    \"stale_cache\",\n}\ndef portfolio_alert_rows(agent_results: list[dict[str, Any]]) -> list[dict[str, str]]:\n    rows: list[dict[str, str]] = []",
+        "detail": "src.investment_agents.ui.observability",
         "documentation": {}
     },
     {
         "label": "check_api_health",
         "kind": 2,
-        "importPath": "streamlit_frontend",
-        "description": "streamlit_frontend",
-        "peekOfCode": "def check_api_health(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/health\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef send_message(api_url: str, message: str) -> dict[str, Any]:\n    response = requests.post(\n        f\"{api_url.rstrip('/')}/chat\",\n        json={\"message\": message, \"chat\": st.session_state.chat},\n        timeout=240,\n    )",
-        "detail": "streamlit_frontend",
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "def check_api_health(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/health\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef list_agents(api_url: str) -> list[dict[str, str]]:\n    response = requests.get(f\"{api_url.rstrip('/')}/agents\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef list_tool_readiness(api_url: str) -> list[dict[str, Any]]:\n    response = requests.get(f\"{api_url.rstrip('/')}/tools/readiness\", timeout=5)",
+        "detail": "src.investment_agents.ui.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "list_agents",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "def list_agents(api_url: str) -> list[dict[str, str]]:\n    response = requests.get(f\"{api_url.rstrip('/')}/agents\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef list_tool_readiness(api_url: str) -> list[dict[str, Any]]:\n    response = requests.get(f\"{api_url.rstrip('/')}/tools/readiness\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef storage_status(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/storage/status\", timeout=5)",
+        "detail": "src.investment_agents.ui.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "list_tool_readiness",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "def list_tool_readiness(api_url: str) -> list[dict[str, Any]]:\n    response = requests.get(f\"{api_url.rstrip('/')}/tools/readiness\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef storage_status(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/storage/status\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef observability_status(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/observability/status\", timeout=5)",
+        "detail": "src.investment_agents.ui.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "storage_status",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "def storage_status(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/storage/status\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef observability_status(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/observability/status\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef list_observability_events(api_url: str, trace_id: str | None = None) -> list[dict[str, Any]]:\n    params = {\"trace_id\": trace_id} if trace_id else None",
+        "detail": "src.investment_agents.ui.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "observability_status",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "def observability_status(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/observability/status\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef list_observability_events(api_url: str, trace_id: str | None = None) -> list[dict[str, Any]]:\n    params = {\"trace_id\": trace_id} if trace_id else None\n    response = requests.get(\n        f\"{api_url.rstrip('/')}/observability/events\",\n        params=params,\n        timeout=5,",
+        "detail": "src.investment_agents.ui.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "list_observability_events",
+        "kind": 2,
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "def list_observability_events(api_url: str, trace_id: str | None = None) -> list[dict[str, Any]]:\n    params = {\"trace_id\": trace_id} if trace_id else None\n    response = requests.get(\n        f\"{api_url.rstrip('/')}/observability/events\",\n        params=params,\n        timeout=5,\n    )\n    response.raise_for_status()\n    return response.json().get(\"events\", [])\ndef send_message(api_url: str, message: str) -> dict[str, Any]:",
+        "detail": "src.investment_agents.ui.streamlit_app",
         "documentation": {}
     },
     {
         "label": "send_message",
         "kind": 2,
-        "importPath": "streamlit_frontend",
-        "description": "streamlit_frontend",
-        "peekOfCode": "def send_message(api_url: str, message: str) -> dict[str, Any]:\n    response = requests.post(\n        f\"{api_url.rstrip('/')}/chat\",\n        json={\"message\": message, \"chat\": st.session_state.chat},\n        timeout=240,\n    )\n    response.raise_for_status()\n    return response.json()\nst.set_page_config(page_title=\"First Agent\", layout=\"wide\")\nst.title(\"First Agent\")",
-        "detail": "streamlit_frontend",
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "def send_message(api_url: str, message: str) -> dict[str, Any]:\n    response = requests.post(\n        f\"{api_url.rstrip('/')}/chat\",\n        json={\"message\": message, \"chat\": st.session_state.chat},\n        timeout=240,\n    )\n    response.raise_for_status()\n    return response.json()\nst.set_page_config(page_title=\"Investment Agents\", layout=\"wide\")\nst.title(\"Investment Agents\")",
+        "detail": "src.investment_agents.ui.streamlit_app",
         "documentation": {}
     },
     {
         "label": "DEFAULT_API_URL",
         "kind": 5,
+        "importPath": "src.investment_agents.ui.streamlit_app",
+        "description": "src.investment_agents.ui.streamlit_app",
+        "peekOfCode": "DEFAULT_API_URL = os.getenv(\"AGENT_API_URL\", \"http://localhost:8000\")\ndef _api_url() -> str:\n    return st.session_state.api_url.rstrip(\"/\")\ndef check_api_health(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/health\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef list_agents(api_url: str) -> list[dict[str, str]]:\n    response = requests.get(f\"{api_url.rstrip('/')}/agents\", timeout=5)\n    response.raise_for_status()",
+        "detail": "src.investment_agents.ui.streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "run_orchestrator_cli",
+        "kind": 2,
+        "importPath": "src.investment_agents.cli",
+        "description": "src.investment_agents.cli",
+        "peekOfCode": "def run_orchestrator_cli() -> None:\n    settings = get_settings()\n    registry = ToolRegistry.from_settings(settings)\n    orchestrator = OrchestratorAgent.from_tool_registry(registry, model_id=settings.model_id)\n    chat = initial_chat()\n    print(\"Investment orchestrator ready. Type a question, or 'quit' to stop.\\n\")\n    print(\"Tool readiness:\")\n    for item in registry.readiness_dicts():\n        label = \"ready\" if item[\"configured\"] else \"needs configuration\"\n        print(f\"- {item['tool_name']}: {label}\")",
+        "detail": "src.investment_agents.cli",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.investment_agents.cli",
+        "description": "src.investment_agents.cli",
+        "peekOfCode": "def main() -> None:\n    parser = argparse.ArgumentParser(description=\"Run the investment agent CLI.\")\n    parser.add_argument(\n        \"--local-llm\",\n        action=\"store_true\",\n        help=\"Run the legacy local Hugging Face chat wrapper instead of the investment orchestrator.\",\n    )\n    args = parser.parse_args()\n    if args.local_llm:\n        run_local_llm_cli()",
+        "detail": "src.investment_agents.cli",
+        "documentation": {}
+    },
+    {
+        "label": "TickerExtractionTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class TickerExtractionTests(unittest.TestCase):\n    def test_extracts_uppercase_ticker_without_lowercase_noise(self) -> None:\n        from investment_agents.domain.tickers import extract_ticker_symbols\n        self.assertEqual(\n            extract_ticker_symbols(\"Review my portfolio loss and AAPL news sentiment\"),\n            [\"AAPL\"],\n        )\n    def test_deduplicates_symbols(self) -> None:\n        from investment_agents.domain.tickers import extract_ticker_symbols\n        self.assertEqual(extract_ticker_symbols(\"Compare AAPL with MSFT and AAPL\"), [\"AAPL\", \"MSFT\"])",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "OrchestratorTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class OrchestratorTests(unittest.TestCase):\n    def setUp(self) -> None:\n        os.environ[\"FINNHUB_API_KEY\"] = \"\"\n        os.environ[\"ALPHAVANTAGE_API_KEY\"] = \"\"\n        os.environ[\"GOOGLE_LEDGER_SHEET_ID\"] = \"\"\n        os.environ[\"GOOGLE_SERVICE_ACCOUNT_FILE\"] = \"\"\n        os.environ[\"GOOGLE_WATCHLIST_RANGE\"] = \"\"\n    def test_routes_portfolio_ticker_news_question_to_all_specialists(self) -> None:\n        from investment_agents.agents.orchestrator import OrchestratorAgent\n        from investment_agents.core.config import get_settings",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsAndToolReadinessTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class SettingsAndToolReadinessTests(unittest.TestCase):\n    def tearDown(self) -> None:\n        os.environ[\"FINNHUB_API_KEY\"] = \"\"\n        os.environ[\"ALPHAVANTAGE_API_KEY\"] = \"\"\n        os.environ[\"GOOGLE_LEDGER_SHEET_ID\"] = \"\"\n        os.environ[\"GOOGLE_SERVICE_ACCOUNT_FILE\"] = \"\"\n        os.environ[\"GOOGLE_WATCHLIST_RANGE\"] = \"\"\n        os.environ[\"STATIC_FX_RATES\"] = \"\"\n        os.environ[\"REPORTING_CURRENCY\"] = \"\"\n        os.environ[\"FINNHUB_SYMBOL_ALIASES\"] = \"\"",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "LedgerParsingTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class LedgerParsingTests(unittest.TestCase):\n    def test_parses_rows_into_cash_flow_and_positions(self) -> None:\n        from investment_agents.domain.ledger import parse_ledger_rows, summarize_transactions\n        rows = [\n            [\"Date\", \"Ticker\", \"Action\", \"Shares\", \"Price\", \"Fees\"],\n            [\"2026-01-01\", \"AAPL\", \"BUY\", \"10\", \"100\", \"1.50\"],\n            [\"2026-01-10\", \"AAPL\", \"SELL\", \"4\", \"120\", \"1.00\"],\n            [\"2026-01-11\", \"MSFT\", \"BUY\", \"2\", \"300\", \"0\"],\n        ]\n        transactions, warnings = parse_ledger_rows(rows)",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "WatchlistParsingTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class WatchlistParsingTests(unittest.TestCase):\n    def test_parses_watchlist_rows_with_optional_context(self) -> None:\n        from investment_agents.domain.watchlist import parse_watchlist_rows, summarize_watchlist\n        rows = [\n            [\"Ticker\", \"Company\", \"Exchange\", \"Currency\", \"Target price\", \"Status\", \"Notes\"],\n            [\"NVDA\", \"Nvidia\", \"NASDAQ\", \"USD\", \"200\", \"researching\", \"AI infrastructure\"],\n            [\"SHEL\", \"Shell\", \"LON\", \"GBP\", \"30\", \"watching\", \"Energy exposure\"],\n            [\"\", \"Blank row\", \"\", \"\", \"\", \"\", \"\"],\n        ]\n        items, warnings = parse_watchlist_rows(rows)",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "ObservabilityPersistenceTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class ObservabilityPersistenceTests(unittest.TestCase):\n    def test_event_recorder_can_persist_and_reload_jsonl_events(self) -> None:\n        from investment_agents.core.observability import EventRecorder\n        with tempfile.TemporaryDirectory() as tmp_dir:\n            log_path = Path(tmp_dir) / \"observability\" / \"events.jsonl\"\n            first_recorder = EventRecorder(log_path=log_path)\n            first_recorder.record(\n                event_type=\"tool_called\",\n                agent_name=\"test_agent\",\n                message=\"Called a test tool.\",",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "StreamlitObservabilityHelperTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class StreamlitObservabilityHelperTests(unittest.TestCase):\n    def test_event_table_rows_flatten_event_metadata_for_display(self) -> None:\n        from investment_agents.ui.observability import event_table_rows, trace_metrics\n        events = [\n            {\n                \"timestamp\": \"2026-08-28T06:00:00+00:00\",\n                \"event_type\": \"orchestrator_decision\",\n                \"agent_name\": \"orchestrator_agent\",\n                \"message\": \"Selected specialist agents.\",\n                \"metadata\": {},",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "MarketDataCacheTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class MarketDataCacheTests(unittest.TestCase):\n    def test_cache_round_trips_raw_payloads(self) -> None:\n        from investment_agents.storage.market_cache import MarketDataCache\n        with tempfile.TemporaryDirectory() as tmp_dir:\n            cache = MarketDataCache(Path(tmp_dir) / \"market.duckdb\")\n            cache.store_raw_payload(\"finnhub\", \"quote\", \"AAPL\", {\"c\": 101})\n            cached = cache.get_fresh_raw_payload(\"finnhub\", \"quote\", \"AAPL\", ttl_seconds=3600)\n            self.assertIsNotNone(cached)\n            self.assertEqual(cached.payload, {\"c\": 101})\n            self.assertTrue(cache.status()[\"exists\"])",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "ProviderGracefulDegradationTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class ProviderGracefulDegradationTests(unittest.TestCase):\n    def test_finnhub_network_failure_returns_tool_result(self) -> None:\n        import requests\n        from investment_agents.core.config import Settings\n        from investment_agents.tools.finnhub import FinnhubInvestmentTool\n        tool = FinnhubInvestmentTool(Settings(finnhub_api_key=\"test-key\"))\n        with patch(\"investment_agents.tools.finnhub.requests.get\") as mocked_get:\n            mocked_get.side_effect = requests.Timeout(\"timed out\")\n            result = tool.analyze_symbol(\"AAPL\")\n        self.assertEqual(result.status, \"provider_error\")",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "SpecialistSymbolSelectionTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class SpecialistSymbolSelectionTests(unittest.TestCase):\n    def test_finnhub_agent_uses_hinted_symbols_with_configured_cap(self) -> None:\n        from investment_agents.agents.finnhub_agent import FinnhubInvestmentAgent\n        from investment_agents.core.config import Settings\n        from investment_agents.tools.finnhub import FinnhubInvestmentTool\n        settings = Settings(finnhub_api_key=\"\", max_enrichment_symbols=2)\n        agent = FinnhubInvestmentAgent(FinnhubInvestmentTool(settings), settings=settings)\n        result = agent.analyze(\n            \"Check my holdings\",\n            \"trace-symbol-cap\",",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "ApiContractTests",
+        "kind": 6,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "class ApiContractTests(unittest.TestCase):\n    def setUp(self) -> None:\n        os.environ[\"FINNHUB_API_KEY\"] = \"\"\n        os.environ[\"ALPHAVANTAGE_API_KEY\"] = \"\"\n        os.environ[\"GOOGLE_LEDGER_SHEET_ID\"] = \"\"\n    def test_api_exposes_agents_chat_and_observability(self) -> None:\n        from fastapi.testclient import TestClient\n        import agent_api\n        client = TestClient(agent_api.app)\n        health = client.get(\"/health\")",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_DIR",
+        "kind": 5,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "ROOT_DIR = Path(__file__).resolve().parents[1]\nSRC_DIR = ROOT_DIR / \"src\"\nfor path in (ROOT_DIR, SRC_DIR):\n    if str(path) not in sys.path:\n        sys.path.insert(0, str(path))\nclass TickerExtractionTests(unittest.TestCase):\n    def test_extracts_uppercase_ticker_without_lowercase_noise(self) -> None:\n        from investment_agents.domain.tickers import extract_ticker_symbols\n        self.assertEqual(\n            extract_ticker_symbols(\"Review my portfolio loss and AAPL news sentiment\"),",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "SRC_DIR",
+        "kind": 5,
+        "importPath": "tests.test_multi_agent_architecture",
+        "description": "tests.test_multi_agent_architecture",
+        "peekOfCode": "SRC_DIR = ROOT_DIR / \"src\"\nfor path in (ROOT_DIR, SRC_DIR):\n    if str(path) not in sys.path:\n        sys.path.insert(0, str(path))\nclass TickerExtractionTests(unittest.TestCase):\n    def test_extracts_uppercase_ticker_without_lowercase_noise(self) -> None:\n        from investment_agents.domain.tickers import extract_ticker_symbols\n        self.assertEqual(\n            extract_ticker_symbols(\"Review my portfolio loss and AAPL news sentiment\"),\n            [\"AAPL\"],",
+        "detail": "tests.test_multi_agent_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "SRC_DIR",
+        "kind": 5,
+        "importPath": "agent_api",
+        "description": "agent_api",
+        "peekOfCode": "SRC_DIR = Path(__file__).resolve().parent / \"src\"\nif str(SRC_DIR) not in sys.path:\n    sys.path.insert(0, str(SRC_DIR))\nfrom investment_agents.api.app import app  # noqa: E402,F401",
+        "detail": "agent_api",
+        "documentation": {}
+    },
+    {
+        "label": "SRC_DIR",
+        "kind": 5,
+        "importPath": "first_agent",
+        "description": "first_agent",
+        "peekOfCode": "SRC_DIR = Path(__file__).resolve().parent / \"src\"\nif str(SRC_DIR) not in sys.path:\n    sys.path.insert(0, str(SRC_DIR))\nfrom investment_agents.core.chat import (  # noqa: E402,F401\n    AgentResponse,\n    ChatMessage,\n    FirstAgent,\n    create_text_generation_pipeline,\n    initial_chat,\n    parse_pipeline_response,",
+        "detail": "first_agent",
+        "documentation": {}
+    },
+    {
+        "label": "SRC_DIR",
+        "kind": 5,
         "importPath": "streamlit_frontend",
         "description": "streamlit_frontend",
-        "peekOfCode": "DEFAULT_API_URL = os.getenv(\"AGENT_API_URL\", \"http://localhost:8000\")\ndef _api_url() -> str:\n    return st.session_state.api_url.rstrip(\"/\")\ndef check_api_health(api_url: str) -> dict[str, Any]:\n    response = requests.get(f\"{api_url.rstrip('/')}/health\", timeout=5)\n    response.raise_for_status()\n    return response.json()\ndef send_message(api_url: str, message: str) -> dict[str, Any]:\n    response = requests.post(\n        f\"{api_url.rstrip('/')}/chat\",",
+        "peekOfCode": "SRC_DIR = Path(__file__).resolve().parent / \"src\"\nif str(SRC_DIR) not in sys.path:\n    sys.path.insert(0, str(SRC_DIR))\nfrom investment_agents.ui import streamlit_app  # noqa: E402,F401",
         "detail": "streamlit_frontend",
         "documentation": {}
     }

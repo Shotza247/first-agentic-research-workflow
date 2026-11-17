@@ -25,6 +25,8 @@ event_recorder.configure(
     enabled=settings.observability_enabled,
     log_path=settings.observability_log_path,
     max_events=settings.observability_max_events,
+    max_bytes=settings.observability_max_bytes,
+    backup_count=settings.observability_backup_count,
 )
 tool_registry = ToolRegistry.from_settings(settings)
 orchestrator = OrchestratorAgent.from_tool_registry(tool_registry, model_id=settings.model_id)

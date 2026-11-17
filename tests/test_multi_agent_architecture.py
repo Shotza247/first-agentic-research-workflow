@@ -9,7 +9,8 @@ from unittest.mock import patch
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 SRC_DIR = ROOT_DIR / "src"
-for path in (ROOT_DIR, SRC_DIR):
+SCRIPTS_DIR = ROOT_DIR / "scripts"
+for path in (ROOT_DIR, SRC_DIR, SCRIPTS_DIR):
     if str(path) not in sys.path:
         sys.path.insert(0, str(path))
 
@@ -27,6 +28,110 @@ class TickerExtractionTests(unittest.TestCase):
         from investment_agents.domain.tickers import extract_ticker_symbols
 
         self.assertEqual(extract_ticker_symbols("Compare AAPL with MSFT and AAPL"), ["AAPL", "MSFT"])
+
+
+class SettingsDefaultsTests(unittest.TestCase):
+    def test_local_agent_api_default_matches_documented_port(self) -> None:
+        from investment_agents.core.config import Settings
+
+        with patch.dict(os.environ, {}, clear=True):
+            self.assertEqual(Settings().agent_api_url, "http://localhost:8001")
+
+
+class RoutingTests(unittest.TestCase):
+    def test_ticker_aapl_does_not_match_ledger_keyword_pl(self) -> None:
+        from investment_agents.agents.orchestrator import OrchestratorAgent
+        from investment_agents.core.config import Settings
+
+        orchestrator = OrchestratorAgent.from_settings(Settings())
+        agents, decision = orchestrator.router.route(
+            "What are the latest market trends for AAPL?"
+        )
+
+        self.assertEqual(
+            [agent.name for agent in agents],
+            [
+                "finnhub_investment_agent",
+                "alphavantage_research_agent",
+                "web_search_agent",
+            ],
+        )
+        self.assertEqual(decision.focus_areas, ["market", "research"])
+
+
+class StreamlitFrontendTests(unittest.TestCase):
+    def test_chat_submission_sets_trace_state_before_rendering_tabs(self) -> None:
+        from streamlit.testing.v1 import AppTest
+        from investment_agents.ui import streamlit_app
+
+        prompt = "What are the latest market trends for AAPL?"
+        result = {
+            "chat": [
+                {"role": "user", "content": prompt},
+                {"role": "assistant", "content": "Market response"},
+            ],
+            "trace_id": "trace-123",
+            "routing_decision": {"focus_areas": ["market", "research"]},
+            "agent_results": [],
+            "source_notes": [],
+            "selected_agents": ["finnhub_investment_agent"],
+            "elapsed_seconds": 1.25,
+        }
+
+        with (
+            patch.object(
+                streamlit_app,
+                "api_connection_status",
+                return_value={"health": {"status": "ok"}, "error": None},
+            ),
+            patch.object(streamlit_app, "list_tool_readiness", return_value=[]),
+            patch.object(streamlit_app, "send_message", return_value=result),
+            patch.object(streamlit_app, "list_observability_events", return_value=[{"event": "chat"}]),
+        ):
+            app = AppTest.from_file(
+                str(ROOT_DIR / "scripts" / "streamlit_frontend.py"),
+                default_timeout=10,
+            ).run()
+            app.chat_input[0].set_value(prompt).run()
+
+        self.assertFalse(app.exception)
+        self.assertEqual(app.session_state["last_trace_id"], "trace-123")
+        self.assertEqual(app.session_state["last_trace_events"], [{"event": "chat"}])
+        self.assertIn("Latest trace", [item.value for item in app.subheader])
+        self.assertIn(
+            "1.25s | trace trace-123 | agents: finnhub_investment_agent",
+            [item.value for item in app.caption],
+        )
+
+    def test_home_page_explains_startup_and_api_connection_failure(self) -> None:
+        import requests
+        from streamlit.testing.v1 import AppTest
+        from investment_agents.ui import streamlit_app
+
+        with patch.dict(os.environ, {"AGENT_API_URL": "http://unavailable.test:8765"}):
+            with (
+                patch.object(streamlit_app, "DEFAULT_API_URL", "http://unavailable.test:8765"),
+                patch("requests.get", side_effect=requests.ConnectionError("offline")),
+            ):
+                app = AppTest.from_file(
+                    str(ROOT_DIR / "scripts" / "streamlit_frontend.py"),
+                    default_timeout=10,
+                ).run()
+
+        self.assertFalse(app.exception)
+        self.assertEqual(app.title[0].value, "Investment Agents")
+        self.assertIn("Ask a market or portfolio question to get started.", [item.value for item in app.info])
+        self.assertIn(
+            "Agent API unavailable at http://unavailable.test:8765",
+            [item.value for item in app.error],
+        )
+        self.assertEqual(len(app.chat_input), 1)
+
+        app.button[0].click().run()
+
+        self.assertFalse(app.exception)
+        self.assertEqual(app.title[0].value, "Investment Agents")
+        self.assertEqual(len(app.chat_input), 1)
 
 
 class OrchestratorTests(unittest.TestCase):
@@ -613,6 +718,41 @@ class ObservabilityPersistenceTests(unittest.TestCase):
             self.assertEqual(len(events), 1)
             self.assertEqual(events[0]["event_type"], "tool_called")
             self.assertEqual(events[0]["metadata"]["tool_name"], "test_tool")
+
+    def test_event_recorder_rotates_logs_and_keeps_recent_events_and_trace_lookup(self) -> None:
+        from investment_agents.core.observability import EventRecorder
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            log_path = Path(tmp_dir) / "events.jsonl"
+            recorder = EventRecorder(
+                max_events=2,
+                log_path=log_path,
+                max_bytes=1,
+                backup_count=2,
+            )
+
+            for index in range(4):
+                recorder.record(
+                    event_type="test",
+                    agent_name="test_agent",
+                    message=f"event-{index}",
+                    trace_id=f"trace-{index}",
+                )
+
+            recent_events = recorder.list_events()
+            retained_trace = recorder.list_events(trace_id="trace-1")
+
+            self.assertEqual(
+                [event["message"] for event in recent_events],
+                ["event-2", "event-3"],
+            )
+            self.assertEqual(len(retained_trace), 1)
+            self.assertEqual(retained_trace[0]["message"], "event-1")
+            self.assertEqual(recorder.status()["event_count"], 3)
+
+            recorder.clear()
+            self.assertEqual(recorder.list_events(), [])
+            self.assertEqual(recorder.status()["event_count"], 0)
 
     def test_disabled_event_recorder_does_not_store_events(self) -> None:
         from investment_agents.core.observability import EventRecorder

@@ -15,6 +15,19 @@ Dependencies include the local Transformers/PyTorch stack. The first local model
 run downloads model weights. `.env.example` is a template, not a loaded file.
 Do not commit keys or service-account credentials.
 
+## Local entry points
+
+Run commands from the repository root. The thin launchers are grouped under
+`scripts/` while application code remains in `src/investment_agents/`.
+
+```powershell
+.venv\Scripts\python.exe -m uvicorn agent_api:app --app-dir scripts --reload --port 8001
+.venv\Scripts\python.exe -m streamlit run scripts\streamlit_frontend.py --server.port 8501
+.venv\Scripts\python.exe scripts\first_agent.py
+```
+
+The API launcher uses port 8001 locally; Docker Compose uses port 8000 internally.
+
 ## Google Sheets Ledger
 
 The existing adapter reads a spreadsheet directly with read-only Sheets API access.
@@ -83,7 +96,12 @@ not imply general Drive document access.
 - `CONCENTRATION_ALERT_THRESHOLD` and `LOSS_ALERT_THRESHOLD`: decimal ratios,
   defaults 0.40 and 0.10. Calculations depend on supplied sheet values.
 - `OBSERVABILITY_LOG_PATH`: optional JSONL event persistence; otherwise events
-  remain in memory. `OBSERVABILITY_MAX_EVENTS` defaults to 500.
+  remain in memory. `OBSERVABILITY_MAX_EVENTS` defaults to 500 for API results.
+  Persistent logs rotate at `OBSERVABILITY_MAX_BYTES` (10 MiB by default) and keep
+  `OBSERVABILITY_BACKUP_COUNT` rotated files (5 by default), for up to about 60 MiB
+  of retained history. Recent event reads inspect only the newest events; trace
+  lookups search all retained files. Increase the size or backup count if you need
+  a longer local analysis history.
 
 Missing FX rates are reported rather than used to fabricate combined totals.
 Market/research tools use fresh cached payloads, then live requests, then stale
@@ -97,9 +115,10 @@ models. The API's `model_id` metadata does not prove a model was invoked.
 `LLM_PROVIDER`, `OPENAI_API_KEY`, `OPENAI_MODEL`, and `LLM_MAX_OUTPUT_TOKENS` are
 reserved settings: current API response generation does not use them.
 
-The API/default CLI load `.env` via shared settings. Set Streamlit's
-`AGENT_API_URL` in its process environment or sidebar as shown in the
-[README](../README.md). Restart processes after configuration changes.
+The API/default CLI load `.env` via shared settings. Local Streamlit defaults to
+`http://localhost:8001`; change the sidebar API URL or set `AGENT_API_URL` in the
+process environment when using another port. Restart processes after configuration
+changes.
 
 ## Docker
 

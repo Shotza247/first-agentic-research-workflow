@@ -6,7 +6,7 @@ tags: []
 
 # Research-Agent Architecture
 
-Source review: 2026-09-16. This describes implemented code separately from plans;
+Source review: 2026-11-17. This describes implemented code separately from plans;
 it is not a new live integration certification.
 
 ## Scope
@@ -37,23 +37,46 @@ Package paths below are relative to `src/investment_agents/`.
 | `api/` | HTTP routes and request/response contracts |
 | `ui/` | Streamlit client and trace presentation |
 
-Root launchers remain compatibility entry points. Root `tests/` contains the
-existing automated checks. See [SETUP.md](SETUP.md) for integration details.
-Keep the Python package name until imports and consumers can be migrated together.
-The ledger and quote modules are retained, connected code, not disabled archives.
+The `scripts/` folder contains thin launchers for CLI, API, and Streamlit entry
+points; application logic stays in the `src/investment_agents/` package. Root
+`tests/` contains automated checks. See [SETUP.md](SETUP.md) for setup and
+integration details. The ledger and quote modules are connected code, not disabled
+archives.
 
 ## Runtime Today
 
-```text
-CLI default --------------------+
-Streamlit -> FastAPI /chat ------+-> OrchestratorAgent.respond()
-                                    -> keyword/ticker routing
-                                    -> ledger / Finnhub / Alpha Vantage / web agents
-                                    -> provider tools and DuckDB cache
-                                    -> cited evidence response and trace
-
-CLI --local-llm -> FirstAgent -> local Hugging Face generation
+```mermaid
+flowchart TD
+    User[User question] --> UI[Streamlit UI]
+    UI -->|POST /chat| API[FastAPI]
+    CLI[CLI] --> Orchestrator
+    API --> Orchestrator[Orchestrator]
+    Orchestrator --> Router[Keyword and ticker routing]
+    Router --> Ledger[Ledger agent]
+    Router --> Finnhub[Finnhub agent]
+    Router --> AlphaVantage[Alpha Vantage agent]
+    Router --> Web[Web search agent]
+    Ledger --> Sheets[Google Sheets adapter]
+    Finnhub --> FinnhubAPI[Finnhub API]
+    AlphaVantage --> AlphaAPI[Alpha Vantage API]
+    Web --> Search[DuckDuckGo search]
+    Finnhub --> Cache[(DuckDB market cache)]
+    AlphaVantage --> Cache
+    Ledger --> Evidence[Structured evidence and citations]
+    Finnhub --> Evidence
+    AlphaVantage --> Evidence
+    Web --> Evidence
+    Evidence --> Orchestrator
+    Orchestrator --> Response[Cited reply, agent results, trace ID]
+    Response --> API
+    API --> UI
+    CLI -->|--local-llm only| LocalModel[FirstAgent and local Hugging Face model]
 ```
+
+The normal chat path returns one cited response to the UI. Specialist agents
+retrieve evidence; the orchestrator routes the question and combines results.
+The local Hugging Face model is a separate CLI option and is not part of the
+default API or Streamlit response path.
 
 The API returns updated chat history, but current routing and template synthesis
 operate on the current question. Returning history does not establish contextual
